@@ -1,0 +1,61 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classic Elegant Theme Switch</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-theme="light">
+    <div class="theme-switch-wrapper">
+      <label class="theme-switch" for="theme-toggle">
+        <input type="checkbox" id="theme-toggle" aria-label="Toggle theme" />
+        <span class="slider"></span>
+      </label>
+    </div>
+    <script src="theme-switch.js"></script>
+  </body>
+</html>
+
+/* styles.css */ /* ======================= CSS Variables
+======================= */ :root { /* Modern Color Palette */ --primary:
+#6366f1; --primary-light: #818cf8; --primary-dark: #4f46e5; --secondary:
+#10b981; --secondary-light: #34d399; --secondary-dark: #059669; --accent:
+#f43f5e; --floating-dark: rgba(30, 41, 59, 0.8); /* Dark Theme Variables */
+--card-bg-dark: rgba(30, 41, 59, 0.5); --card-border-dark: rgba(255, 255, 255,
+0.05); --card-shadow-dark: var(--shadow-lg); --card-highlight-dark: rgba(255,
+255, 255, 0.03); /* Light Theme Variables */ --card-bg-light: rgba(241, 245,
+249, 0.7); --card-border-light: rgba(30, 41, 59, 0.1); --card-shadow-light: 0
+10px 15px rgba(15, 23, 42, 0.08); --card-highlight-light: rgba(255, 255, 255,
+0.7); /* Neutral Palette */ --surface-0: #0f172a; --surface-1: #1e293b;
+--surface-2: #334155; --text-primary: #f8fafc; --text-secondary: #94a3b8;
+--text-tertiary: #64748b; --border: rgba(148, 163, 184, 0.2); /* Spacing */
+--space-1: 0.25rem; --space-4: 1rem; --space-6: 1.5rem; --space-12: 3rem; /*
+Border Radius */ --radius-full: 9999px; /* Shadows */ --shadow-sm: 0 1px 2px
+rgba(0, 0, 0, 0.1); /* Transitions */ --transition-fast: 0.2s cubic-bezier(0.4,
+0, 0.2, 1); } /* Theme Overrides */ [data-theme="light"] { --card-bg:
+var(--card-bg-light); --card-border: var(--card-border-light); --card-shadow:
+var(--card-shadow-light); --card-highlight: var(--card-highlight-light); }
+[data-theme="dark"] { --card-bg: var(--card-bg-dark); --card-border:
+var(--card-border-dark); --card-shadow: var(--card-shadow-dark);
+--card-highlight: var(--card-highlight-dark); } /* =======================
+Switch Styles ======================= */ .theme-switch { position: relative;
+display: inline-block; width: var(--space-12); height: var(--space-6); }
+.theme-switch input { opacity: 0; width: 0; height: 0; } .slider { position:
+absolute; top: 0; left: 0; right: 0; bottom: 0; background: var(--surface-2);
+border-radius: var(--radius-full); transition: background
+var(--transition-fast); } .slider::before { content: ""; position: absolute;
+width: var(--space-4); height: var(--space-4); top: calc((var(--space-6) -
+var(--space-4)) / 2); left: var(--space-1); background: var(--text-primary);
+border-radius: var(--radius-full); box-shadow: var(--shadow-sm); transition:
+transform var(--transition-fast), background var(--transition-fast); }
+.theme-switch input:checked + .slider { background: var(--secondary); }
+.theme-switch input:checked + .slider::before { transform:
+translateX(calc(var(--space-12) - var(--space-4) - 2 * var(--space-1)));
+background: var(--text-primary); } .theme-switch input:focus + .slider {
+box-shadow: 0 0 0 3px var(--primary-light); } /* Optional positioning */
+.theme-switch-wrapper { padding: var(--space-4); } // theme-switch.js const
+toggle = document.getElementById('theme-toggle'); const root =
+document.documentElement; toggle.addEventListener('change', () => {
+root.setAttribute('data-theme', toggle.checked ? 'dark' : 'light'); });
