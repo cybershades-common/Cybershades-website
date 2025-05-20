@@ -129,7 +129,7 @@
   --accent: #f43f5e;
   --floating-dark: rgba(30, 41, 59, 0.8);
 
-  /* Dark Theme Variables */
+  /* Dark Theme Variables-- */
   --card-bg-dark: rgba(30, 41, 59, 0.5);
   --card-border-dark: rgba(255, 255, 255, 0.05);
   --card-shadow-dark: var(--shadow-lg);
