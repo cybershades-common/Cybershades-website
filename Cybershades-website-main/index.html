@@ -52,7 +52,7 @@
       <div class="container">
         <div class="navbar-wrapper">
           <a href="#" class="logo">
-            <span class="logo-text">Cyber<span>Shades</span></span>
+            <span class="logo-text"><img src="img/CS-logo.png" alt=""></span>
             <div class="logo-glitch"></div>
           </a>
           <div class="navbar-links">
@@ -176,7 +176,7 @@
               transformation journey.
             </p>
             <div class="hero-cta">
-              <a href="#contact" class="btn btn-primary btn-shine">
+              <a href="#contact" class="btn btn-primary">
                 <span>Get Started</span>
                 <i class="fas fa-arrow-right"></i>
               </a>
@@ -492,6 +492,7 @@
             <button class="tab-btn" data-tab="database">Database</button>
             <button class="tab-btn" data-tab="cloud">Cloud & DevOps</button>
             <button class="tab-btn" data-tab="ai">AI & ML</button>
+            <hr />
           </div>
           <div class="tab-content">
             <div class="tab-pane active" id="frontend">
@@ -691,125 +692,175 @@
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
-      <div class="container">
-        <div class="section-header" data-aos="fade-up">
-          <div class="section-subtitle">Our Work</div>
-          <br>
-          <h2 class="section-title">
-            Featured <span class="gradient-text">Projects</span>
-          </h2>
-          <p class="section-description">
-            Explore our portfolio of successful projects delivered for clients
-            across industries
+    <!-- Clean Portfolio Section -->
+<section id="portfolio" class="cs-portfolio">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <div class="section-subtitle">Our Work</div>
+      <br>
+      <h2 class="section-title">
+        Featured <span class="gradient-text">Projects</span>
+      </h2>
+      <p class="section-description">
+        Explore our portfolio of successful projects delivered for clients across industries
+      </p>
+    </div>
+
+    <div class="cs-portfolio-grid" data-aos="fade-up">
+      <!-- Project Card 1 -->
+      <div class="cs-portfolio-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="cs-card-image">
+          <img src="img/ecommerce.jpg" alt="E-commerce Platform">
+        </div>
+        <div class="cs-card-content">
+          <div class="cs-card-header">
+            <span class="cs-category">Web Development</span>
+            <span class="cs-year">2024</span>
+          </div>
+          <h3 class="cs-project-title">E-commerce Platform</h3>
+          <p class="cs-project-description">
+            A high-performance e-commerce platform with advanced search, personalized recommendations, 
+            and seamless payment integration for enhanced user experience.
           </p>
-        </div>
-
-
-        <div class="portfolio-grid" data-aos="fade-up">
-          <div class="portfolio-item" data-category="web">
-            <div class="portfolio-img">
-              <img src="/api/placeholder/600/450" alt="E-commerce Platform" />
-            </div>
-            <div class="portfolio-overlay">
-              <div class="portfolio-content">
-                <div class="portfolio-category">Web Development</div>
-                <h3 class="portfolio-title">E-commerce Platform</h3>
-                <p class="portfolio-description">
-                  A high-performance e-commerce platform with advanced search
-                  and personalization.
-                </p>
-                <a href="#" class="portfolio-link">View Project</a>
-              </div>
-            </div>
+          <div class="cs-tech-stack">
+            <span class="cs-tech-item">React</span>
+            <span class="cs-tech-item">Node.js</span>
+            <span class="cs-tech-item">MongoDB</span>
+            <span class="cs-tech-item">AWS</span>
           </div>
-          <div class="portfolio-item" data-category="mobile">
-            <div class="portfolio-img">
-              <img src="/api/placeholder/600/450" alt="Healthcare Mobile App" />
-            </div>
-            <div class="portfolio-overlay">
-              <div class="portfolio-content">
-                <div class="portfolio-category">Mobile App</div>
-                <h3 class="portfolio-title">Healthcare App</h3>
-                <p class="portfolio-description">
-                  A telemedicine app connecting patients with healthcare
-                  providers.
-                </p>
-                <a href="#" class="portfolio-link">View Project</a>
-              </div>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="ai">
-            <div class="portfolio-img">
-              <img src="/api/placeholder/600/450" alt="AI-powered Analytics" />
-            </div>
-            <div class="portfolio-overlay">
-              <div class="portfolio-content">
-                <div class="portfolio-category">AI & ML</div>
-                <h3 class="portfolio-title">Predictive Analytics</h3>
-                <p class="portfolio-description">
-                  AI-driven analytics platform for business intelligence.
-                </p>
-                <a href="#" class="portfolio-link">View Project</a>
-              </div>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="cloud">
-            <div class="portfolio-img">
-              <img src="/api/placeholder/600/450" alt="Cloud Migration" />
-            </div>
-            <div class="portfolio-overlay">
-              <div class="portfolio-content">
-                <div class="portfolio-category">Cloud</div>
-                <h3 class="portfolio-title">Enterprise Cloud Migration</h3>
-                <p class="portfolio-description">
-                  Complete migration of legacy systems to AWS cloud
-                  architecture.
-                </p>
-                <a href="#" class="portfolio-link">View Project</a>
-              </div>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="web">
-            <div class="portfolio-img">
-              <img src="/api/placeholder/600/450" alt="Financial Dashboard" />
-            </div>
-            <div class="portfolio-overlay">
-              <div class="portfolio-content">
-                <div class="portfolio-category">Web Development</div>
-                <h3 class="portfolio-title">Financial Dashboard</h3>
-                <p class="portfolio-description">
-                  Real-time financial analytics dashboard for investment
-                  tracking.
-                </p>
-                <a href="#" class="portfolio-link">View Project</a>
-              </div>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="mobile">
-            <div class="portfolio-img">
-              <img src="/api/placeholder/600/450" alt="Logistics Mobile App" />
-            </div>
-            <div class="portfolio-overlay">
-              <div class="portfolio-content">
-                <div class="portfolio-category">Mobile App</div>
-                <h3 class="portfolio-title">Logistics Tracker</h3>
-                <p class="portfolio-description">
-                  Real-time logistics tracking app with route optimization.
-                </p>
-                <a href="#" class="portfolio-link">View Project</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="portfolio-cta" data-aos="fade-up">
-          <a href="#" class="btn btn-outline">
-            <span>View All Projects</span>
-            <i class="fas fa-arrow-right"></i>
-          </a>
         </div>
       </div>
-    </section>
+
+      <!-- Project Card 2 -->
+      <div class="cs-portfolio-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="cs-card-image">
+          <img src="img/healthcare-app.jpg" alt="Healthcare Mobile App">
+        </div>
+        <div class="cs-card-content">
+          <div class="cs-card-header">
+            <span class="cs-category">Mobile App</span>
+            <span class="cs-year">2024</span>
+          </div>
+          <h3 class="cs-project-title">Healthcare App</h3>
+          <p class="cs-project-description">
+            A comprehensive telemedicine application connecting patients with healthcare providers 
+            through secure video consultations and real-time health monitoring.
+          </p>
+          <div class="cs-tech-stack">
+            <span class="cs-tech-item">React Native</span>
+            <span class="cs-tech-item">Firebase</span>
+            <span class="cs-tech-item">WebRTC</span>
+            <span class="cs-tech-item">ML Kit</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Card 3 -->
+      <div class="cs-portfolio-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="cs-card-image">
+          <img src="img/ai-power.jpg" alt="AI Analytics Platform">
+        </div>
+        <div class="cs-card-content">
+          <div class="cs-card-header">
+            <span class="cs-category">AI & ML</span>
+            <span class="cs-year">2024</span>
+          </div>
+          <h3 class="cs-project-title">AI Analytics Platform</h3>
+          <p class="cs-project-description">
+            Advanced AI-driven analytics platform that transforms raw business data into 
+            actionable insights with predictive modeling and intelligent automation.
+          </p>
+          <div class="cs-tech-stack">
+            <span class="cs-tech-item">Python</span>
+            <span class="cs-tech-item">TensorFlow</span>
+            <span class="cs-tech-item">Apache Spark</span>
+            <span class="cs-tech-item">Docker</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Card 4 -->
+      <div class="cs-portfolio-card" data-aos="fade-up" data-aos-delay="400">
+        <div class="cs-card-image">
+          <img src="img/cloud-computing.jpg" alt="Cloud Migration">
+        </div>
+        <div class="cs-card-content">
+          <div class="cs-card-header">
+            <span class="cs-category">Cloud Solutions</span>
+            <span class="cs-year">2023</span>
+          </div>
+          <h3 class="cs-project-title">Enterprise Cloud Migration</h3>
+          <p class="cs-project-description">
+            Complete digital transformation with seamless migration of legacy enterprise 
+            systems to AWS cloud infrastructure achieving 99.9% uptime.
+          </p>
+          <div class="cs-tech-stack">
+            <span class="cs-tech-item">AWS</span>
+            <span class="cs-tech-item">Kubernetes</span>
+            <span class="cs-tech-item">Terraform</span>
+            <span class="cs-tech-item">Jenkins</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Card 5 -->
+      <div class="cs-portfolio-card" data-aos="fade-up" data-aos-delay="500">
+        <div class="cs-card-image">
+          <img src="img/financial-dashboard.jpg" alt="Financial Dashboard">
+        </div>
+        <div class="cs-card-content">
+          <div class="cs-card-header">
+            <span class="cs-category">Web Development</span>
+            <span class="cs-year">2024</span>
+          </div>
+          <h3 class="cs-project-title">Financial Dashboard</h3>
+          <p class="cs-project-description">
+            Real-time financial analytics dashboard with interactive charts, portfolio tracking, 
+            and advanced reporting capabilities for investment management.
+          </p>
+          <div class="cs-tech-stack">
+            <span class="cs-tech-item">Vue.js</span>
+            <span class="cs-tech-item">D3.js</span>
+            <span class="cs-tech-item">Node.js</span>
+            <span class="cs-tech-item">PostgreSQL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Card 6 -->
+      <div class="cs-portfolio-card" data-aos="fade-up" data-aos-delay="600">
+        <div class="cs-card-image">
+          <img src="img/logistic.jpg" alt="Logistics Tracker">
+        </div>
+        <div class="cs-card-content">
+          <div class="cs-card-header">
+            <span class="cs-category">Mobile App</span>
+            <span class="cs-year">2023</span>
+          </div>
+          <h3 class="cs-project-title">Logistics Tracker</h3>
+          <p class="cs-project-description">
+            Comprehensive logistics management application with real-time tracking, route optimization, 
+            and automated delivery notifications for enhanced operational efficiency.
+          </p>
+          <div class="cs-tech-stack">
+            <span class="cs-tech-item">Flutter</span>
+            <span class="cs-tech-item">Google Maps</span>
+            <span class="cs-tech-item">Firebase</span>
+            <span class="cs-tech-item">IoT</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Simple CTA -->
+    <div class="cs-portfolio-cta" data-aos="fade-up">
+      <a href="#" class="btn btn-outline">
+        <span>View All Projects</span>
+        <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
 
     <!-- Team Section -->
     <section id="team" class="team">
@@ -829,7 +880,7 @@
           <div class="team-card">
             <div class="team-img-wrapper">
               <img
-                src="/api/placeholder/400/400"
+                src="img/team-1.webp"
                 alt="Team Member"
                 class="team-img"
               />
@@ -858,7 +909,7 @@
           <div class="team-card">
             <div class="team-img-wrapper">
               <img
-                src="/api/placeholder/400/400"
+                src="img/team2.webp"
                 alt="Team Member"
                 class="team-img"
               />
@@ -886,7 +937,7 @@
           <div class="team-card">
             <div class="team-img-wrapper">
               <img
-                src="/api/placeholder/400/400"
+                src="img/team3.jpeg"
                 alt="Team Member"
                 class="team-img"
               />
@@ -914,7 +965,7 @@
           <div class="team-card">
             <div class="team-img-wrapper">
               <img
-                src="/api/placeholder/400/400"
+                src="img/team4.webp"
                 alt="Team Member"
                 class="team-img"
               />
@@ -1005,7 +1056,7 @@
         <div class="step-content left-content">
           <div class="content-glow"></div>
           <div class="content-panel">
-            <h3 class="step-heading">Discovery & Planning</h3>
+            <h3>Discovery & Planning</h3>
             <p class="step-description">
               We begin by understanding your business objectives, target audience, and technical requirements through collaborative workshops and research.
             </p>
@@ -1034,7 +1085,7 @@
         <div class="step-content right-content">
           <div class="content-glow"></div>
           <div class="content-panel">
-            <h3 class="step-heading">Design & Prototyping</h3>
+            <h3>Design & Prototyping</h3>
             <p class="step-description">
               Our design team creates wireframes, prototypes, and user flows that translate your vision into intuitive, engaging user experiences.
             </p>
@@ -1063,7 +1114,7 @@
         <div class="step-content left-content">
           <div class="content-glow"></div>
           <div class="content-panel">
-            <h3 class="step-heading">Development</h3>
+            <h3>Development</h3>
             <p class="step-description">
               Our engineers build your product using modern technologies and best practices, ensuring scalability, performance, and security.
             </p>
@@ -1092,7 +1143,7 @@
         <div class="step-content right-content">
           <div class="content-glow"></div>
           <div class="content-panel">
-            <h3 class="step-heading">Testing & QA</h3>
+            <h3>Testing & QA</h3>
             <p class="step-description">
               We rigorously test every component of your solution to catch bugs, validate performance, and ensure a seamless, error-free user experience.
             </p>
@@ -1121,7 +1172,7 @@
         <div class="step-content left-content">
           <div class="content-glow"></div>
           <div class="content-panel">
-            <h3 class="step-heading">Deployment & Support</h3>
+            <h3>Deployment & Support</h3>
             <p class="step-description">
               After launch, we provide ongoing monitoring, support, and iterative improvements to keep your solution running smoothly and evolving with your needs.
             </p>
@@ -1137,133 +1188,145 @@
   </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials">
-      <div class="container">
-        <div class="section-header" data-aos="fade-up">
-          <div class="section-subtitle">Client Success Stories</div>
-          <br>
-          <h2 class="section-title">
-            What Our <span class="gradient-text">Clients Say</span>
-          </h2>
-          <p class="section-description">
-            Hear from organizations that have transformed their operations with
-            our technology solutions
-          </p>
-        </div>
-        <div class="testimonial-carousel" data-aos="fade-up">
-          <div class="testimonial-track">
-            <div class="testimonial-card">
-              <div class="testimonial-rating">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-              <div class="testimonial-text">
-                <p>
-                  "CyberShades delivered an exceptional e-commerce platform that
-                  has increased our online sales by 200% within six months.
-                  Their attention to detail, technical expertise, and proactive
-                  communication made them the perfect technology partner."
-                </p>
-              </div>
-              <div class="testimonial-author">
-                <div class="author-img">
-                  <img src="/api/placeholder/80/80" alt="Client" />
+    
+<section id="testimonials" class="testimonials">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-subtitle">Client Success Stories</div>
+      <br>
+      <h2 class="section-title">
+        What Our <span class="gradient-text">Clients Say</span>
+      </h2>
+      <p class="section-description">
+        Hear from organizations that have transformed their operations with our technology solutions
+      </p>
+    </div>
+
+    <div class="testimonial-carousel">
+      <div class="carousel-viewport">
+        <div class="carousel-track">
+          <div class="testimonial-card">
+            <div class="testimonial-inner">
+              <div class="testimonial-content">
+                <div class="testimonial-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
                 </div>
-                <div class="author-info">
-                  <h4>Rajiv Mehta</h4>
-                  <p>CEO, Fashion Retailers Ltd.</p>
+                <div class="testimonial-text">
+                  <p>
+                    CyberShades delivered an exceptional e-commerce platform that has increased our online sales by 200% within six months. Their attention to detail, technical expertise, and proactive communication made them the perfect technology partner.
+                  </p>
                 </div>
-              </div>
-            </div>
-            <div class="testimonial-card">
-              <div class="testimonial-rating">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-              <div class="testimonial-text">
-                <p>
-                  "The AI-powered analytics solution developed by CyberShades
-                  has revolutionized our decision-making process. We now have
-                  real-time insights that were previously impossible to access,
-                  giving us a significant competitive advantage."
-                </p>
-              </div>
-              <div class="testimonial-author">
-                <div class="author-img">
-                  <img src="/api/placeholder/80/80" alt="Client" />
-                </div>
-                <div class="author-info">
-                  <h4>Sunita Reddy</h4>
-                  <p>CTO, Financial Analytics Co.</p>
-                </div>
-              </div>
-            </div>
-            <div class="testimonial-card">
-              <div class="testimonial-rating">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-              <div class="testimonial-text">
-                <p>
-                  "Working with CyberShades on our cloud migration project was
-                  seamless. They understood our complex infrastructure and
-                  delivered a solution that improved performance while reducing
-                  our operational costs by 40%."
-                </p>
-              </div>
-              <div class="testimonial-author">
-                <div class="author-img">
-                  <img src="/api/placeholder/80/80" alt="Client" />
-                </div>
-                <div class="author-info">
-                  <h4>Amit Singh</h4>
-                  <p>IT Director, Healthcare Solutions</p>
+                <div class="testimonial-author">
+                  <div class="author-avatar">
+                    <img src="img/testimonial-1.webp" alt="Rajiv Mehta" />
+                  </div>
+                  <div class="author-info">
+                    <h4>Rajiv Mehta</h4>
+                    <p>CEO, Fashion Retailers Ltd.</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="carousel-controls">
-            <button class="carousel-prev">
-              <i class="fas fa-arrow-left"></i>
-            </button>
-            <div class="carousel-dots">
-              <span class="dot active"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
+
+          <div class="testimonial-card">
+            <div class="testimonial-inner">
+              <div class="testimonial-content">
+                <div class="testimonial-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <div class="testimonial-text">
+                  <p>
+                    The AI-powered analytics solution developed by CyberShades has revolutionized our decision-making process. We now have real-time insights that were previously impossible to access, giving us a significant competitive advantage.
+                  </p>
+                </div>
+                <div class="testimonial-author">
+                  <div class="author-avatar">
+                    <img src="img/team2.webp" alt="Sunita Reddy" />
+                  </div>
+                  <div class="author-info">
+                    <h4>Sunita Reddy</h4>
+                    <p>CTO, Financial Analytics Co.</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <button class="carousel-next">
-              <i class="fas fa-arrow-right"></i>
-            </button>
           </div>
-        </div>
-        <div class="client-logos" data-aos="fade-up">
-          <div class="client-logo">
-            <img src="/api/placeholder/150/60" alt="Client Logo" />
-          </div>
-          <div class="client-logo">
-            <img src="/api/placeholder/150/60" alt="Client Logo" />
-          </div>
-          <div class="client-logo">
-            <img src="/api/placeholder/150/60" alt="Client Logo" />
-          </div>
-          <div class="client-logo">
-            <img src="/api/placeholder/150/60" alt="Client Logo" />
-          </div>
-          <div class="client-logo">
-            <img src="/api/placeholder/150/60" alt="Client Logo" />
+
+          <div class="testimonial-card">
+            <div class="testimonial-inner">
+              <div class="testimonial-content">
+                <div class="testimonial-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <div class="testimonial-text">
+                  <p>
+                    Working with CyberShades on our cloud migration project was seamless. They understood our complex infrastructure and delivered a solution that improved performance while reducing our operational costs by 40%.
+                  </p>
+                </div>
+                <div class="testimonial-author">
+                  <div class="author-avatar">
+                    <img src="img/team4.webp" alt="Amit Singh" />
+                  </div>
+                  <div class="author-info">
+                    <h4>Amit Singh</h4>
+                    <p>IT Director, Healthcare Solutions</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+
+      <div class="carousel-navigation">
+        <button class="nav-button nav-prev">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="carousel-indicators">
+          <span class="indicator active"></span>
+          <span class="indicator"></span>
+          <span class="indicator"></span>
+        </div>
+        <button class="nav-button nav-next">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="client-showcase">
+      <div class="client-logos">
+        <div class="client-logo">
+          <img src="/api/placeholder/150/60" alt="Client Logo" />
+        </div>
+        <div class="client-logo">
+          <img src="/api/placeholder/150/60" alt="Client Logo" />
+        </div>
+        <div class="client-logo">
+          <img src="/api/placeholder/150/60" alt="Client Logo" />
+        </div>
+        <div class="client-logo">
+          <img src="/api/placeholder/150/60" alt="Client Logo" />
+        </div>
+        <div class="client-logo">
+          <img src="/api/placeholder/150/60" alt="Client Logo" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- Blog Section -->
     <section id="blog" class="blog">
@@ -1282,7 +1345,7 @@
         <div class="blog-grid" data-aos="fade-up">
           <div class="blog-card">
             <div class="blog-img">
-              <img src="/api/placeholder/600/400" alt="Blog Image" />
+              <img src="img/ai-blog-1.jpeg" alt="Blog Image" />
               <div class="blog-category">Artificial Intelligence</div>
             </div>
             <div class="blog-content">
@@ -1302,7 +1365,7 @@
           </div>
           <div class="blog-card">
             <div class="blog-img">
-              <img src="/api/placeholder/600/400" alt="Blog Image" />
+              <img src="img/ai-blog-2.webp" alt="Blog Image" />
               <div class="blog-category">Cloud Computing</div>
             </div>
             <div class="blog-content">
@@ -1322,7 +1385,7 @@
           </div>
           <div class="blog-card">
             <div class="blog-img">
-              <img src="/api/placeholder/600/400" alt="Blog Image" />
+              <img src="img/blog-3.webp" alt="Blog Image" />
               <div class="blog-category">Cybersecurity</div>
             </div>
             <div class="blog-content">

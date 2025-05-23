@@ -705,3 +705,135 @@ const root = document.documentElement;
 toggle.addEventListener('change', () => {
   root.setAttribute('data-theme', toggle.checked ? 'dark' : 'light');
 });
+
+
+
+// Classic Testimonial Carousel
+        class ClassicTestimonialCarousel {
+            constructor() {
+                this.track = document.querySelector('.carousel-track');
+                this.cards = document.querySelectorAll('.testimonial-card');
+                this.indicators = document.querySelectorAll('.indicator');
+                this.prevBtn = document.querySelector('.nav-prev');
+                this.nextBtn = document.querySelector('.nav-next');
+                
+                this.currentIndex = 0;
+                this.isTransitioning = false;
+                this.autoplayInterval = null;
+                
+                this.init();
+            }
+            
+            init() {
+                this.setupEventListeners();
+                this.startAutoplay();
+                this.animateStars();
+            }
+            
+            setupEventListeners() {
+                this.prevBtn.addEventListener('click', () => this.navigate('prev'));
+                this.nextBtn.addEventListener('click', () => this.navigate('next'));
+                
+                this.indicators.forEach((indicator, index) => {
+                    indicator.addEventListener('click', () => this.goToSlide(index));
+                });
+                
+                // Pause autoplay on hover
+                const carousel = document.querySelector('.testimonial-carousel');
+                carousel.addEventListener('mouseenter', () => this.stopAutoplay());
+                carousel.addEventListener('mouseleave', () => this.startAutoplay());
+                
+                // Touch support
+                let startX = 0;
+                let threshold = 50;
+                
+                this.track.addEventListener('touchstart', (e) => {
+                    startX = e.touches[0].clientX;
+                });
+                
+                this.track.addEventListener('touchend', (e) => {
+                    const endX = e.changedTouches[0].clientX;
+                    const diff = startX - endX;
+                    
+                    if (Math.abs(diff) > threshold) {
+                        if (diff > 0) {
+                            this.navigate('next');
+                        } else {
+                            this.navigate('prev');
+                        }
+                    }
+                });
+                
+                // Keyboard navigation
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'ArrowLeft') this.navigate('prev');
+                    if (e.key === 'ArrowRight') this.navigate('next');
+                });
+            }
+            
+            navigate(direction) {
+                if (this.isTransitioning) return;
+                
+                if (direction === 'next') {
+                    this.currentIndex = (this.currentIndex + 1) % this.cards.length;
+                } else {
+                    this.currentIndex = (this.currentIndex - 1 + this.cards.length) % this.cards.length;
+                }
+                
+                this.updateCarousel();
+            }
+            
+            goToSlide(index) {
+                if (this.isTransitioning || index === this.currentIndex) return;
+                this.currentIndex = index;
+                this.updateCarousel();
+            }
+            
+            updateCarousel() {
+                this.isTransitioning = true;
+                
+                const translateX = -this.currentIndex * 100;
+                this.track.style.transform = `translateX(${translateX}%)`;
+                
+                // Update indicators
+                this.indicators.forEach((indicator, index) => {
+                    indicator.classList.toggle('active', index === this.currentIndex);
+                });
+                
+                setTimeout(() => {
+                    this.isTransitioning = false;
+                    this.animateStars();
+                }, 500);
+            }
+            
+            animateStars() {
+                const currentCard = this.cards[this.currentIndex];
+                const stars = currentCard.querySelectorAll('.testimonial-rating i');
+                
+                stars.forEach((star, index) => {
+                    star.style.animation = 'none';
+                    star.offsetHeight; // Force reflow
+                    star.style.animation = `fadeInUp 0.6s ease-out ${(index + 1) * 0.1}s forwards`;
+                });
+            }
+            
+            startAutoplay() {
+                this.stopAutoplay();
+                this.autoplayInterval = setInterval(() => {
+                    this.navigate('next');
+                }, 5000);
+            }
+            
+            stopAutoplay() {
+                if (this.autoplayInterval) {
+                    clearInterval(this.autoplayInterval);
+                    this.autoplayInterval = null;
+                }
+            }
+        }
+        
+        // Initialize carousel
+        document.addEventListener('DOMContentLoaded', () => {
+            new ClassicTestimonialCarousel();
+        });
+
