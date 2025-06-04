@@ -378,63 +378,6 @@ function initContactForm() {
     }
 }
 
-// 3D tilt effect for cards
-// Service card interactive effects
-function initServiceCardEffects() {
-  const cards = document.querySelectorAll('.service-card');
-  
-  cards.forEach(card => {
-    // Add glow element to each card
-    const glow = document.createElement('div');
-    glow.className = 'card-glow';
-    card.appendChild(glow);
-    
-    // Mouse move effect
-    card.addEventListener('mousemove', (e) => {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-      
-      // Calculate tilt based on mouse position
-      const tiltX = (x - centerX) / 15;
-      const tiltY = (y - centerY) / 15;
-      
-      // Apply 3D transform
-      card.style.transform = `
-        perspective(1000px) 
-        rotateX(${-tiltY}deg) 
-        rotateY(${tiltX}deg) 
-        translateY(-15px)
-        scale(1.02)
-      `;
-      
-      // Update glow position
-      glow.style.opacity = '1';
-      glow.style.left = `${x}px`;
-      glow.style.top = `${y}px`;
-    });
-    
-    // Reset on mouse leave
-    card.addEventListener('mouseleave', () => {
-      card.style.transform = 'none';
-      glow.style.opacity = '0';
-      
-      // Apply transition for smooth return
-      card.style.transition = 'all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
-      setTimeout(() => {
-        card.style.transition = '';
-      }, 500);
-    });
-    
-    // Remove transition on enter for smooth movement
-    card.addEventListener('mouseenter', () => {
-      card.style.transition = 'none';
-    });
-  });
-}
 
 // Call this function after page loads
 document.addEventListener('DOMContentLoaded', function() {
@@ -654,14 +597,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const htmlEl      = document.documentElement;
   const KEY         = 'theme';
 
-  // 1) Initialize from storage (default = dark)
-  const stored = localStorage.getItem(KEY) || 'dark';
+  // 1) Initialize from storage (default = light)
+  const stored = localStorage.getItem(KEY) || 'light';
   htmlEl.setAttribute('data-theme', stored);
-  toggleInput.checked = (stored === 'light');
+  toggleInput.checked = (stored === 'dark');
 
   // 2) When the user flips the switch…
   toggleInput.addEventListener('change', () => {
-    const newTheme = toggleInput.checked ? 'light' : 'dark';
+    const newTheme = toggleInput.checked ? 'dark' : 'light';
     htmlEl.setAttribute('data-theme', newTheme);
     localStorage.setItem(KEY, newTheme);
   });
@@ -837,4 +780,3 @@ toggle.addEventListener('change', () => {
         document.addEventListener('DOMContentLoaded', () => {
             new ClassicTestimonialCarousel();
         });
-
