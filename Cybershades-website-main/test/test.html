@@ -1,940 +1,593 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Classic Elegant Testimonials</title>
+    <title>CyberShades | Next-Gen IT Solutions | Jaipur</title>
+    <meta
+      name="description"
+      content="CyberShades - Leading IT service provider based in Jaipur offering innovative software development, cloud solutions, AI, and cybersecurity services."
+    />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-    <style>
-      :root {
-        /* Modern Color Palette */
-        --basic-white: #fff;
-        --basic-black: #000;
-        --primary: #6366f1;
-        --primary-light: #818cf8;
-        --primary-dark: #4f46e5;
-        --secondary: #10b981;
-        --secondary-light: #34d399;
-        --secondary-dark: #059669;
-        --accent: #f43f5e;
-        --floating-dark: rgba(30, 41, 59, 0.8);
-
-        /* Dark Theme Variables */
-        --card-bg-dark: rgba(30, 41, 59, 0.5);
-        --card-border-dark: rgba(255, 255, 255, 0.05);
-        --card-shadow-dark: var(--shadow-lg);
-        --card-highlight-dark: rgba(255, 255, 255, 0.03);
-
-        /* Light Theme Variables */
-        --card-bg-light: rgba(241, 245, 249, 0.7);
-        --card-border-light: rgba(30, 41, 59, 0.1);
-        --card-shadow-light: 0 10px 15px rgba(15, 23, 42, 0.08);
-        --card-highlight-light: rgba(255, 255, 255, 0.7);
-
-        /* Neutral Palette */
-        --surface-0: #0f172a;
-        --surface-1: #1e293b;
-        --surface-2: #334155;
-        --text-primary: #f8fafc;
-        --text-secondary: #94a3b8;
-        --text-tertiary: #64748b;
-        --border: rgba(148, 163, 184, 0.2);
-
-        /* Gradients */
-        --gradient-primary: linear-gradient(
-          135deg,
-          var(--primary),
-          var(--secondary)
-        );
-        --gradient-secondary: linear-gradient(
-          135deg,
-          var(--accent),
-          var(--primary)
-        );
-        --gradient-glass: linear-gradient(
-          135deg,
-          rgba(255, 255, 255, 0.1),
-          rgba(255, 255, 255, 0.05)
-        );
-        --gradient-glow: radial-gradient(
-          circle at center,
-          var(--primary-light),
-          transparent 70%
-        );
-
-        /* Typography */
-        --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
-          sans-serif;
-        --font-display: "Plus Jakarta Sans", var(--font-sans);
-        --font-mono: "JetBrains Mono", monospace;
-
-        /* Spacing */
-        --space-1: 0.25rem;
-        --space-2: 0.5rem;
-        --space-3: 0.75rem;
-        --space-4: 1rem;
-        --space-6: 1.5rem;
-        --space-8: 2rem;
-        --space-12: 3rem;
-        --space-16: 4rem;
-        --space-24: 6rem;
-
-        /* Border Radius */
-        --radius-sm: 0.25rem;
-        --radius-md: 0.5rem;
-        --radius-lg: 0.75rem;
-        --radius-xl: 1rem;
-        --radius-2xl: 1.5rem;
-        --radius-full: 9999px;
-
-        /* Shadows */
-        --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.1);
-        --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-        --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
-        --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
-        --shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.1);
-        --shadow-glow: 0 0 20px rgba(99, 102, 241, 0.5);
-
-        /* Transitions */
-        --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-        --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-        --transition-bounce: 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-
-        /* Z-index */
-        --z-0: 0;
-        --z-10: 10;
-        --z-20: 20;
-        --z-30: 30;
-        --z-40: 40;
-        --z-50: 50;
-        --z-100: 100;
-      }
-
-      /* Light theme vars */
-      html[data-theme="light"] {
-        /* Primary / Secondary / Accent */
-        --primary: #3b82f6;
-        --primary-light: #60a5fa;
-        --primary-dark: #1e40af;
-        --secondary: #10b981;
-        --secondary-light: #34d399;
-        --secondary-dark: #047857;
-        --accent: #f97316;
-        --floating-dark: rgb(207 249 242);
-
-        /* Surfaces */
-        --surface-0: #ffffff;
-        --surface-1: #f9fafb;
-        --surface-2: #f3f4f6;
-
-        /* Text */
-        --text-primary: #111827;
-        --text-secondary: #4b5563;
-        --text-tertiary: #6b7280;
-
-        /* Borders & Dividers */
-        --border: #e5e7eb;
-
-        /* Gradients */
-        --gradient-primary: linear-gradient(
-          135deg,
-          var(--primary),
-          var(--secondary)
-        );
-        --gradient-secondary: linear-gradient(
-          135deg,
-          var(--accent),
-          var(--primary)
-        );
-        --gradient-glass: linear-gradient(
-          135deg,
-          rgba(255, 255, 255, 0.75),
-          rgba(255, 255, 255, 0.45)
-        );
-        --gradient-glow: radial-gradient(
-          circle at center,
-          #bfdbfe,
-          transparent 70%
-        );
-      }
-
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: var(--font-sans);
-        background: var(--surface-0);
-        color: var(--text-primary);
-        line-height: 1.6;
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: var(--space-4);
-        transition: all var(--transition-normal);
-      }
-
-      .container {
-        max-width: 1200px;
-        width: 100%;
-        margin: 0 auto;
-        padding: 0 var(--space-4);
-      }
-
-      /* Theme Toggle for Demo */
-      .theme-toggle {
-        position: fixed;
-        top: var(--space-4);
-        right: var(--space-4);
-        background: var(--surface-1);
-        border: 1px solid var(--border);
-        border-radius: var(--radius-full);
-        padding: var(--space-2) var(--space-4);
-        cursor: pointer;
-        font-size: 0.875rem;
-        color: var(--text-secondary);
-        transition: all var(--transition-normal);
-        z-index: var(--z-50);
-      }
-
-      .theme-toggle:hover {
-        background: var(--surface-2);
-        color: var(--text-primary);
-      }
-
-      /* ===== TESTIMONIALS SECTION ===== */
-      .testimonials {
-        position: relative;
-        background: var(--surface-0);
-        padding: var(--space-24) 0;
-      }
-
-      /* ORIGINAL SECTION HEADER */
-      .section-header {
-        text-align: center;
-        margin-bottom: var(--space-16);
-      }
-
-      .section-subtitle {
-        font-size: 0.875rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        background: var(--gradient-primary);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        margin-bottom: var(--space-4);
-      }
-
-      .section-title {
-        font-family: var(--font-display);
-        font-size: clamp(2rem, 5vw, 3.5rem);
-        font-weight: 800;
-        margin-bottom: var(--space-6);
-        line-height: 1.2;
-      }
-
-      .gradient-text {
-        background: var(--gradient-primary);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-
-      .section-description {
-        font-size: 1.125rem;
-        color: var(--text-secondary);
-        max-width: 600px;
-        margin: 0 auto;
-        line-height: 1.7;
-      }
-
-      /* CLASSIC ELEGANT CAROUSEL */
-      .testimonial-carousel {
-        position: relative;
-        max-width: 900px;
-        margin: 0 auto var(--space-12);
-      }
-
-      .carousel-viewport {
-        overflow: hidden;
-        border-radius: var(--radius-2xl);
-      }
-
-      .carousel-track {
-        display: flex;
-        transition: transform var(--transition-slow);
-      }
-
-      .testimonial-card {
-        min-width: 100%;
-        padding: 0 var(--space-4);
-      }
-
-      .testimonial-inner {
-        background: var(--card-bg-dark);
-        border: 1px solid var(--card-border-dark);
-        border-radius: var(--radius-2xl);
-        padding: var(--space-12);
-        box-shadow: var(--card-shadow-dark);
-        position: relative;
-        transition: all var(--transition-normal);
-      }
-
-      html[data-theme="light"] .testimonial-inner {
-        background: var(--card-bg-light);
-        border-color: var(--card-border-light);
-        box-shadow: var(--card-shadow-light);
-      }
-
-      .testimonial-inner:hover {
-        transform: translateY(-4px);
-        box-shadow: var(--shadow-xl);
-      }
-
-      html[data-theme="light"] .testimonial-inner:hover {
-        box-shadow: 0 20px 25px rgba(15, 23, 42, 0.12);
-      }
-
-      /* Subtle accent line */
-      .testimonial-inner::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: var(--space-12);
-        right: var(--space-12);
-        height: 2px;
-        background: var(--gradient-primary);
-        border-radius: var(--radius-full);
-      }
-
-      .testimonial-content {
-        text-align: center;
-      }
-
-      .testimonial-rating {
-        display: flex;
-        justify-content: center;
-        gap: var(--space-2);
-        margin-bottom: var(--space-8);
-      }
-
-      .testimonial-rating i {
-        color: var(--accent);
-        font-size: 1.25rem;
-        opacity: 0;
-        animation: fadeInUp 0.6s ease-out forwards;
-      }
-
-      .testimonial-rating i:nth-child(1) {
-        animation-delay: 0.1s;
-      }
-      .testimonial-rating i:nth-child(2) {
-        animation-delay: 0.2s;
-      }
-      .testimonial-rating i:nth-child(3) {
-        animation-delay: 0.3s;
-      }
-      .testimonial-rating i:nth-child(4) {
-        animation-delay: 0.4s;
-      }
-      .testimonial-rating i:nth-child(5) {
-        animation-delay: 0.5s;
-      }
-
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(10px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      .testimonial-text {
-        margin-bottom: var(--space-8);
-        position: relative;
-      }
-
-      .testimonial-text p {
-        font-size: clamp(1.125rem, 2.5vw, 1.375rem);
-        color: var(--text-primary);
-        line-height: 1.8;
-        font-weight: 400;
-        font-style: italic;
-        position: relative;
-        max-width: 650px;
-        margin: 0 auto;
-      }
-
-      /* Classic quote marks */
-      .testimonial-text::before,
-      .testimonial-text::after {
-        content: '"';
-        font-size: 4rem;
-        line-height: 1;
-        color: var(--primary);
-        opacity: 0.3;
-        position: absolute;
-        font-family: Georgia, serif;
-      }
-
-      .testimonial-text::before {
-        top: -1rem;
-        left: -1rem;
-      }
-
-      .testimonial-text::after {
-        bottom: -2rem;
-        right: -1rem;
-      }
-
-      .testimonial-author {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: var(--space-6);
-      }
-
-      .author-avatar {
-        width: 80px;
-        height: 80px;
-        border-radius: var(--radius-full);
-        overflow: hidden;
-        border: 3px solid var(--primary);
-        box-shadow: var(--shadow-md);
-        transition: all var(--transition-normal);
-      }
-
-      .author-avatar:hover {
-        transform: scale(1.05);
-        box-shadow: var(--shadow-lg);
-      }
-
-      .author-avatar img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      .author-info h4 {
-        font-family: var(--font-display);
-        font-size: 1.25rem;
-        font-weight: 600;
-        color: var(--text-primary);
-        margin-bottom: var(--space-1);
-      }
-
-      .author-info p {
-        color: var(--text-secondary);
-        font-size: 0.95rem;
-        font-weight: 500;
-      }
-
-      /* ELEGANT NAVIGATION */
-      .carousel-navigation {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-top: var(--space-8);
-      }
-
-      .nav-button {
-        width: 56px;
-        height: 56px;
-        background: var(--surface-1);
-        border: 1px solid var(--border);
-        border-radius: var(--radius-full);
-        color: var(--text-primary);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        font-size: 1.25rem;
-        transition: all var(--transition-normal);
-        box-shadow: var(--shadow-sm);
-      }
-
-      .nav-button:hover {
-        background: var(--surface-2);
-        color: var(--primary);
-        transform: translateY(-2px);
-        box-shadow: var(--shadow-md);
-      }
-
-      .nav-button:active {
-        transform: translateY(0);
-      }
-
-      .carousel-indicators {
-        display: flex;
-        align-items: center;
-        gap: var(--space-3);
-      }
-
-      .indicator {
-        width: 12px;
-        height: 12px;
-        border-radius: var(--radius-full);
-        background: var(--text-tertiary);
-        cursor: pointer;
-        transition: all var(--transition-normal);
-      }
-
-      .indicator.active {
-        background: var(--primary);
-        transform: scale(1.2);
-      }
-
-      .indicator:hover:not(.active) {
-        background: var(--text-secondary);
-        transform: scale(1.1);
-      }
-
-      /* CLIENT LOGOS */
-      .client-showcase {
-        margin-top: var(--space-16);
-        text-align: center;
-      }
-
-      .client-logos {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: var(--space-8);
-        margin-top: var(--space-8);
-        padding: var(--space-8);
-        background: var(--surface-1);
-        border: 1px solid var(--border);
-        border-radius: var(--radius-2xl);
-        box-shadow: var(--shadow-sm);
-      }
-
-      .client-logo {
-        height: 80px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        opacity: 0.6;
-        transition: all var(--transition-normal);
-        border-radius: var(--radius-lg);
-        padding: var(--space-4);
-      }
-
-      .client-logo:hover {
-        opacity: 1;
-        background: var(--surface-2);
-        transform: translateY(-2px);
-      }
-
-      .client-logo img {
-        max-width: 100%;
-        max-height: 60%;
-        object-fit: contain;
-        filter: grayscale(100%);
-        transition: filter var(--transition-normal);
-      }
-
-      .client-logo:hover img {
-        filter: grayscale(0%);
-      }
-
-      /* RESPONSIVE DESIGN */
-      @media (max-width: 768px) {
-        .testimonials {
-          padding: var(--space-16) 0;
-        }
-
-        .testimonial-inner {
-          padding: var(--space-8);
-        }
-
-        .testimonial-text::before,
-        .testimonial-text::after {
-          font-size: 2.5rem;
-        }
-
-        .testimonial-text::before {
-          top: -0.5rem;
-          left: -0.5rem;
-        }
-
-        .testimonial-text::after {
-          bottom: -1rem;
-          right: -0.5rem;
-        }
-
-        .testimonial-author {
-          flex-direction: column;
-          gap: var(--space-4);
-        }
-
-        .author-info {
-          text-align: center;
-        }
-
-        .client-logos {
-          grid-template-columns: repeat(2, 1fr);
-          gap: var(--space-4);
-        }
-
-        .client-logo {
-          height: 60px;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .testimonial-inner {
-          padding: var(--space-6);
-        }
-
-        .testimonial-inner::before {
-          left: var(--space-6);
-          right: var(--space-6);
-        }
-
-        .author-avatar {
-          width: 60px;
-          height: 60px;
-        }
-
-        .nav-button {
-          width: 48px;
-          height: 48px;
-          font-size: 1rem;
-        }
-      }
-    </style>
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="test.css" />
   </head>
   <body>
-    <button class="theme-toggle" onclick="toggleTheme()">
-      <i class="fas fa-sun"></i> Toggle Theme
-    </button>
+    <!-- Particles Background -->
+    <div class="particles-wrapper">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
 
-    <section id="testimonials" class="testimonials">
+    <!-- Preloader -->
+    <div class="preloader">
+      <div class="preloader-inner">
+        <div class="logo-container">
+          <span class="logo-text">Cyber<span>Shades</span></span>
+        </div>
+        <div class="loading-bar">
+          <div class="loading-progress"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
       <div class="container">
-        <div class="section-header">
-          <div class="section-subtitle">Client Success Stories</div>
-          <br />
-          <h2 class="section-title">
-            What Our <span class="gradient-text">Clients Say</span>
-          </h2>
-          <p class="section-description">
-            Hear from organizations that have transformed their operations with
-            our technology solutions
-          </p>
-        </div>
+        <div class="navbar-wrapper">
+          <a href="#" class="logo">
+            <span class="logo-text"><img src="img/CS-logo.png" alt="" /></span>
+            <div class="logo-glitch"></div>
+          </a>
+          <div class="navbar-links">
+            <ul class="nav-menu">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link active">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="services.html" class="nav-link">Services</a>
+              </li>
+              <li class="nav-item">
+                <a href="techno.html" class="nav-link">Technologies</a>
+              </li>
+              <li class="nav-item">
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a href="team.html" class="nav-link">Team</a>
+              </li>
 
-        <div class="testimonial-carousel">
-          <div class="carousel-viewport">
-            <div class="carousel-track">
-              <div class="testimonial-card">
-                <div class="testimonial-inner">
-                  <div class="testimonial-content">
-                    <div class="testimonial-rating">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                    </div>
-                    <div class="testimonial-text">
-                      <p>
-                        CyberShades delivered an exceptional e-commerce platform
-                        that has increased our online sales by 200% within six
-                        months. Their attention to detail, technical expertise,
-                        and proactive communication made them the perfect
-                        technology partner.
-                      </p>
-                    </div>
-                    <div class="testimonial-author">
-                      <div class="author-avatar">
-                        <img
-                          src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face"
-                          alt="Rajiv Mehta"
-                        />
-                      </div>
-                      <div class="author-info">
-                        <h4>Rajiv Mehta</h4>
-                        <p>CEO, Fashion Retailers Ltd.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <li class="nav-item">
+                <a href="testimonial.html" class="nav-link">Testimonials</a>
+              </li>
 
-              <div class="testimonial-card">
-                <div class="testimonial-inner">
-                  <div class="testimonial-content">
-                    <div class="testimonial-rating">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                    </div>
-                    <div class="testimonial-text">
-                      <p>
-                        The AI-powered analytics solution developed by
-                        CyberShades has revolutionized our decision-making
-                        process. We now have real-time insights that were
-                        previously impossible to access, giving us a significant
-                        competitive advantage.
-                      </p>
-                    </div>
-                    <div class="testimonial-author">
-                      <div class="author-avatar">
-                        <img
-                          src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=80&h=80&fit=crop&crop=face"
-                          alt="Sunita Reddy"
-                        />
-                      </div>
-                      <div class="author-info">
-                        <h4>Sunita Reddy</h4>
-                        <p>CTO, Financial Analytics Co.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="testimonial-card">
-                <div class="testimonial-inner">
-                  <div class="testimonial-content">
-                    <div class="testimonial-rating">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                    </div>
-                    <div class="testimonial-text">
-                      <p>
-                        Working with CyberShades on our cloud migration project
-                        was seamless. They understood our complex infrastructure
-                        and delivered a solution that improved performance while
-                        reducing our operational costs by 40%.
-                      </p>
-                    </div>
-                    <div class="testimonial-author">
-                      <div class="author-avatar">
-                        <img
-                          src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face"
-                          alt="Amit Singh"
-                        />
-                      </div>
-                      <div class="author-info">
-                        <h4>Amit Singh</h4>
-                        <p>IT Director, Healthcare Solutions</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+              <li class="nav-item">
+                <a href="contact.html" class="nav-link">Contact</a>
+              </li>
+            </ul>
           </div>
+          <label class="theme-switch" for="theme-toggle">
+            <input
+              type="checkbox"
+              id="theme-toggle"
+              aria-label="Toggle theme"
+            />
+            <span class="slider"></span>
+          </label>
+          <div class="mobile-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </nav>
 
-          <div class="carousel-navigation">
-            <button class="nav-button nav-prev">
-              <i class="fas fa-chevron-left"></i>
-            </button>
-            <div class="carousel-indicators">
-              <span class="indicator active"></span>
-              <span class="indicator"></span>
-              <span class="indicator"></span>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+      <div class="mobile-menu-container">
+        <ul class="mobile-nav-menu">
+          <li class="mobile-nav-item">
+            <a href="index.html" class="mobile-nav-link">Home</a>
+          </li>
+          <li class="mobile-nav-item">
+            <a href="services.html" class="mobile-nav-link">Services</a>
+          </li>
+          <li class="mobile-nav-item">
+            <a href="techno.html" class="mobile-nav-link">Technologies</a>
+          </li>
+          <li class="mobile-nav-item">
+            <a href="portfolio.html" class="mobile-nav-link">Portfolio</a>
+          </li>
+          <li class="mobile-nav-item">
+            <a href="team.html" class="mobile-nav-link">Team</a>
+          </li>
+
+          <li class="mobile-nav-item">
+            <a href="testimonials.html" class="mobile-nav-link">Testimonials</a>
+          </li>
+
+          <li class="mobile-nav-item">
+            <a href="contact.html" class="mobile-nav-link">Contact</a>
+          </li>
+        </ul>
+        <div class="mobile-contact">
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <span>+91 98765 43210</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>info@cybershades.com</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Tech Hub, C-Scheme, Jaipur</span>
+          </div>
+          <div class="mobile-social">
+            <a href="#" class="social-icon"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Section -->
+
+    <!-- Portfolio Section -->
+    <section class="portfolio-section">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="portfolio-header">
+          <div class="header-content">
+            <span class="section-label">Our Work</span>
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-description">
+              Showcasing our expertise through successful client partnerships
+              and innovative solutions that have transformed businesses across
+              various industries.
+            </p>
+          </div>
+          <div class="header-stats">
+            <div class="stat-item">
+              <span class="stat-number">180+</span>
+              <span class="stat-label">Projects Delivered</span>
             </div>
-            <button class="nav-button nav-next">
-              <i class="fas fa-chevron-right"></i>
-            </button>
+            <div class="stat-item">
+              <span class="stat-number">98%</span>
+              <span class="stat-label">Client Satisfaction</span>
+            </div>
           </div>
         </div>
 
-        <div class="client-showcase">
-          <div class="client-logos">
-            <div class="client-logo">
-              <img
-                src="https://via.placeholder.com/120x40/64748b/ffffff?text=COMPANY"
-                alt="Client Logo"
-              />
+        <!-- Portfolio Categories -->
+        <div class="portfolio-categories">
+          <button class="category-btn active" data-category="all">
+            <span class="category-icon">🎯</span>
+            <span class="category-text">All Projects</span>
+          </button>
+          <button class="category-btn" data-category="enterprise">
+            <span class="category-icon">🏢</span>
+            <span class="category-text">Enterprise Solutions</span>
+          </button>
+          <button class="category-btn" data-category="web">
+            <span class="category-icon">🌐</span>
+            <span class="category-text">Web Applications</span>
+          </button>
+          <button class="category-btn" data-category="mobile">
+            <span class="category-icon">📱</span>
+            <span class="category-text">Mobile Apps</span>
+          </button>
+          <button class="category-btn" data-category="cloud">
+            <span class="category-icon">☁️</span>
+            <span class="category-text">Cloud Infrastructure</span>
+          </button>
+        </div>
+
+        <!-- Portfolio Grid -->
+        <div class="portfolio-grid">
+          <!-- Enterprise Solutions -->
+          <div class="portfolio-card featured" data-category="enterprise">
+            <div class="card-header">
+              <div class="project-meta">
+                <span class="project-category">Enterprise Solution</span>
+                <span class="project-year">2024</span>
+              </div>
+              <div class="project-status">
+                <span class="status-indicator success"></span>
+                <span class="status-text">Live</span>
+              </div>
             </div>
-            <div class="client-logo">
-              <img
-                src="https://via.placeholder.com/120x40/64748b/ffffff?text=BRAND"
-                alt="Client Logo"
-              />
+            <div class="card-content">
+              <h3 class="project-title">
+                Global Supply Chain Management System
+              </h3>
+              <p class="project-description">
+                Comprehensive ERP solution for multinational manufacturing
+                company, integrating inventory management, logistics tracking,
+                and real-time analytics across 15 countries.
+              </p>
+              <div class="project-highlights">
+                <div class="highlight-item">
+                  <span class="highlight-label">Users:</span>
+                  <span class="highlight-value">12,000+</span>
+                </div>
+                <div class="highlight-item">
+                  <span class="highlight-label">Efficiency:</span>
+                  <span class="highlight-value">45% Increase</span>
+                </div>
+                <div class="highlight-item">
+                  <span class="highlight-label">Cost Savings:</span>
+                  <span class="highlight-value">$2.3M Annually</span>
+                </div>
+              </div>
+              <div class="tech-stack">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">AWS</span>
+                <span class="tech-tag">Docker</span>
+              </div>
             </div>
-            <div class="client-logo">
-              <img
-                src="https://via.placeholder.com/120x40/64748b/ffffff?text=STARTUP"
-                alt="Client Logo"
-              />
+            <div class="card-footer">
+              <button class="btn-primary">View Case Study</button>
+              <button class="btn-secondary">Live Demo</button>
             </div>
-            <div class="client-logo">
-              <img
-                src="https://via.placeholder.com/120x40/64748b/ffffff?text=TECH"
-                alt="Client Logo"
-              />
+          </div>
+
+          <!-- Web Application -->
+          <div class="portfolio-card" data-category="web">
+            <div class="card-header">
+              <div class="project-meta">
+                <span class="project-category">Web Application</span>
+                <span class="project-year">2024</span>
+              </div>
+              <div class="project-status">
+                <span class="status-indicator success"></span>
+                <span class="status-text">Live</span>
+              </div>
             </div>
-            <div class="client-logo">
-              <img
-                src="https://via.placeholder.com/120x40/64748b/ffffff?text=GLOBAL"
-                alt="Client Logo"
-              />
+            <div class="card-content">
+              <h3 class="project-title">Healthcare Patient Portal</h3>
+              <p class="project-description">
+                HIPAA-compliant patient management system with appointment
+                scheduling, medical records access, and telemedicine integration
+                for regional healthcare network.
+              </p>
+              <div class="project-highlights">
+                <div class="highlight-item">
+                  <span class="highlight-label">Patients:</span>
+                  <span class="highlight-value">50,000+</span>
+                </div>
+                <div class="highlight-item">
+                  <span class="highlight-label">Appointments:</span>
+                  <span class="highlight-value">5,000/month</span>
+                </div>
+              </div>
+              <div class="tech-stack">
+                <span class="tech-tag">Vue.js</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">Azure</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <button class="btn-primary">View Details</button>
+            </div>
+          </div>
+
+          <!-- Mobile Application -->
+          <div class="portfolio-card" data-category="mobile">
+            <div class="card-header">
+              <div class="project-meta">
+                <span class="project-category">Mobile App</span>
+                <span class="project-year">2024</span>
+              </div>
+              <div class="project-status">
+                <span class="status-indicator success"></span>
+                <span class="status-text">Published</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="project-title">FinTech Banking Mobile App</h3>
+              <p class="project-description">
+                Next-generation mobile banking application with biometric
+                authentication, AI-powered financial insights, and seamless
+                payment processing.
+              </p>
+              <div class="project-highlights">
+                <div class="highlight-item">
+                  <span class="highlight-label">Downloads:</span>
+                  <span class="highlight-value">500K+</span>
+                </div>
+                <div class="highlight-item">
+                  <span class="highlight-label">Rating:</span>
+                  <span class="highlight-value">4.8/5.0</span>
+                </div>
+              </div>
+              <div class="tech-stack">
+                <span class="tech-tag">React Native</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">Firebase</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <button class="btn-primary">View Details</button>
+            </div>
+          </div>
+
+          <!-- Cloud Infrastructure -->
+          <div class="portfolio-card" data-category="cloud">
+            <div class="card-header">
+              <div class="project-meta">
+                <span class="project-category">Cloud Migration</span>
+                <span class="project-year">2023</span>
+              </div>
+              <div class="project-status">
+                <span class="status-indicator success"></span>
+                <span class="status-text">Completed</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="project-title">Enterprise Cloud Migration</h3>
+              <p class="project-description">
+                Complete infrastructure modernization for Fortune 500 company,
+                migrating legacy systems to cloud-native architecture with zero
+                downtime.
+              </p>
+              <div class="project-highlights">
+                <div class="highlight-item">
+                  <span class="highlight-label">Cost Reduction:</span>
+                  <span class="highlight-value">60%</span>
+                </div>
+                <div class="highlight-item">
+                  <span class="highlight-label">Performance:</span>
+                  <span class="highlight-value">3x Faster</span>
+                </div>
+              </div>
+              <div class="tech-stack">
+                <span class="tech-tag">AWS</span>
+                <span class="tech-tag">Kubernetes</span>
+                <span class="tech-tag">Terraform</span>
+                <span class="tech-tag">Jenkins</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <button class="btn-primary">View Details</button>
+            </div>
+          </div>
+
+          <!-- Web Platform -->
+          <div class="portfolio-card" data-category="web">
+            <div class="card-header">
+              <div class="project-meta">
+                <span class="project-category">Web Platform</span>
+                <span class="project-year">2023</span>
+              </div>
+              <div class="project-status">
+                <span class="status-indicator success"></span>
+                <span class="status-text">Live</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="project-title">E-Learning Management System</h3>
+              <p class="project-description">
+                Comprehensive learning management platform with video streaming,
+                interactive assessments, and progress tracking for educational
+                institutions.
+              </p>
+              <div class="project-highlights">
+                <div class="highlight-item">
+                  <span class="highlight-label">Students:</span>
+                  <span class="highlight-value">25,000+</span>
+                </div>
+                <div class="highlight-item">
+                  <span class="highlight-label">Courses:</span>
+                  <span class="highlight-value">1,200+</span>
+                </div>
+              </div>
+              <div class="tech-stack">
+                <span class="tech-tag">Angular</span>
+                <span class="tech-tag">Java</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">Redis</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <button class="btn-primary">View Details</button>
+            </div>
+          </div>
+
+          <!-- Enterprise Solution -->
+          <div class="portfolio-card" data-category="enterprise">
+            <div class="card-header">
+              <div class="project-meta">
+                <span class="project-category">Enterprise Solution</span>
+                <span class="project-year">2023</span>
+              </div>
+              <div class="project-status">
+                <span class="status-indicator success"></span>
+                <span class="status-text">Live</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="project-title">Smart Manufacturing Analytics</h3>
+              <p class="project-description">
+                IoT-enabled manufacturing analytics platform with real-time
+                monitoring, predictive maintenance, and automated quality
+                control systems.
+              </p>
+              <div class="project-highlights">
+                <div class="highlight-item">
+                  <span class="highlight-label">Downtime:</span>
+                  <span class="highlight-value">-75%</span>
+                </div>
+                <div class="highlight-item">
+                  <span class="highlight-label">Quality:</span>
+                  <span class="highlight-value">+40%</span>
+                </div>
+              </div>
+              <div class="tech-stack">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">TensorFlow</span>
+                <span class="tech-tag">InfluxDB</span>
+                <span class="tech-tag">Grafana</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <button class="btn-primary">View Details</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Portfolio Summary -->
+        <div class="portfolio-summary">
+          <div class="summary-content">
+            <h3>Ready to Start Your Next Project?</h3>
+            <p>
+              Let's discuss how we can transform your vision into reality with
+              cutting-edge technology solutions.
+            </p>
+            <div class="summary-actions">
+              <button class="btn-primary large">Start a Project</button>
+              <button class="btn-secondary large">Schedule Consultation</button>
+            </div>
+          </div>
+          <div class="summary-stats">
+            <div class="summary-stat">
+              <span class="stat-number">15+</span>
+              <span class="stat-label">Industries Served</span>
+            </div>
+            <div class="summary-stat">
+              <span class="stat-number">24/7</span>
+              <span class="stat-label">Support Available</span>
+            </div>
+            <div class="summary-stat">
+              <span class="stat-number">99.9%</span>
+              <span class="stat-label">Uptime Guarantee</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <script>
-      // Theme toggle functionality
-      function toggleTheme() {
-        const html = document.documentElement;
-        const currentTheme = html.getAttribute("data-theme");
-        const newTheme = currentTheme === "dark" ? "light" : "dark";
-        html.setAttribute("data-theme", newTheme);
-      }
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-bg"></div>
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-about">
+            <a href="#" class="footer-logo">
+              <span class="logo-text">Cyber<span>Shades</span></span>
+            </a>
+            <p>
+              CyberShades is a leading IT services provider based in Jaipur,
+              delivering innovative technology solutions that empower businesses
+              to thrive in the digital age.
+            </p>
+            <div class="footer-social">
+              <a href="#" class="social-icon"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="footer-links">
+            <h3>Services</h3>
+            <ul>
+              <li><a href="#">Custom Software Development</a></li>
+              <li><a href="#">Mobile App Development</a></li>
+              <li><a href="#">Cloud Solutions</a></li>
+              <li><a href="#">Cybersecurity</a></li>
+              <li><a href="#">AI & Machine Learning</a></li>
+              <li><a href="#">IoT Solutions</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#team">Our Team</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#testimonials">Testimonials</a></li>
+              <li><a href="#blog">Blog</a></li>
+              <li><a href="#contact">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span
+                >Tech Park Tower, 5th Floor<br />C-Scheme, Jaipur 302001<br />Rajasthan,
+                India</span
+              >
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>info@cybershades.com</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone-alt"></i>
+              <span>+91 98765 43210</span>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="copyright">
+            <p>&copy; 2025 CyberShades. All Rights Reserved.</p>
+          </div>
+          <div class="footer-bottom-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cookie Policy</a>
+            <a href="#">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-      // Classic Testimonial Carousel
-      class ClassicTestimonialCarousel {
-        constructor() {
-          this.track = document.querySelector(".carousel-track");
-          this.cards = document.querySelectorAll(".testimonial-card");
-          this.indicators = document.querySelectorAll(".indicator");
-          this.prevBtn = document.querySelector(".nav-prev");
-          this.nextBtn = document.querySelector(".nav-next");
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </a>
 
-          this.currentIndex = 0;
-          this.isTransitioning = false;
-          this.autoplayInterval = null;
-
-          this.init();
-        }
-
-        init() {
-          this.setupEventListeners();
-          this.startAutoplay();
-          this.animateStars();
-        }
-
-        setupEventListeners() {
-          this.prevBtn.addEventListener("click", () => this.navigate("prev"));
-          this.nextBtn.addEventListener("click", () => this.navigate("next"));
-
-          this.indicators.forEach((indicator, index) => {
-            indicator.addEventListener("click", () => this.goToSlide(index));
-          });
-
-          // Pause autoplay on hover
-          const carousel = document.querySelector(".testimonial-carousel");
-          carousel.addEventListener("mouseenter", () => this.stopAutoplay());
-          carousel.addEventListener("mouseleave", () => this.startAutoplay());
-
-          // Touch support
-          let startX = 0;
-          let threshold = 50;
-
-          this.track.addEventListener("touchstart", (e) => {
-            startX = e.touches[0].clientX;
-          });
-
-          this.track.addEventListener("touchend", (e) => {
-            const endX = e.changedTouches[0].clientX;
-            const diff = startX - endX;
-
-            if (Math.abs(diff) > threshold) {
-              if (diff > 0) {
-                this.navigate("next");
-              } else {
-                this.navigate("prev");
-              }
-            }
-          });
-
-          // Keyboard navigation
-          document.addEventListener("keydown", (e) => {
-            if (e.key === "ArrowLeft") this.navigate("prev");
-            if (e.key === "ArrowRight") this.navigate("next");
-          });
-        }
-
-        navigate(direction) {
-          if (this.isTransitioning) return;
-
-          if (direction === "next") {
-            this.currentIndex = (this.currentIndex + 1) % this.cards.length;
-          } else {
-            this.currentIndex =
-              (this.currentIndex - 1 + this.cards.length) % this.cards.length;
-          }
-
-          this.updateCarousel();
-        }
-
-        goToSlide(index) {
-          if (this.isTransitioning || index === this.currentIndex) return;
-          this.currentIndex = index;
-          this.updateCarousel();
-        }
-
-        updateCarousel() {
-          this.isTransitioning = true;
-
-          const translateX = -this.currentIndex * 100;
-          this.track.style.transform = `translateX(${translateX}%)`;
-
-          // Update indicators
-          this.indicators.forEach((indicator, index) => {
-            indicator.classList.toggle("active", index === this.currentIndex);
-          });
-
-          setTimeout(() => {
-            this.isTransitioning = false;
-            this.animateStars();
-          }, 500);
-        }
-
-        animateStars() {
-          const currentCard = this.cards[this.currentIndex];
-          const stars = currentCard.querySelectorAll(".testimonial-rating i");
-
-          stars.forEach((star, index) => {
-            star.style.animation = "none";
-            star.offsetHeight; // Force reflow
-            star.style.animation = `fadeInUp 0.6s ease-out ${
-              (index + 1) * 0.1
-            }s forwards`;
-          });
-        }
-
-        startAutoplay() {
-          this.stopAutoplay();
-          this.autoplayInterval = setInterval(() => {
-            this.navigate("next");
-          }, 5000);
-        }
-
-        stopAutoplay() {
-          if (this.autoplayInterval) {
-            clearInterval(this.autoplayInterval);
-            this.autoplayInterval = null;
-          }
-        }
-      }
-
-      // Initialize carousel
-      document.addEventListener("DOMContentLoaded", () => {
-        new ClassicTestimonialCarousel();
-      });
-    </script>
+    <!-- Scripts -->
+    <script src="../script.js"></script>
+    <script src="test.js"></script>
   </body>
 </html>

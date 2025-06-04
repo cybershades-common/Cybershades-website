@@ -670,6 +670,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+
 document.addEventListener('DOMContentLoaded', function() {
   // Portfolio filter
   const portfolioButtons = document.querySelectorAll('.portfolio-filter .filter-btn');
