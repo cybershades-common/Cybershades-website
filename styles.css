@@ -1728,7 +1728,7 @@ section {
   /* Hover effect on card */
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    
   }
 }
 
@@ -4855,10 +4855,44 @@ html[data-theme="light"] {
     background: var(--primary-dark);
     color: var(--basic-white);
   }
+  .step-marker {
+       background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255,255, 255, 0.5) 100%  );  
+    box-shadow: 0 0 0 2px var(--primary), 0 0 20px var(--primary-glow); 
+}
+.marker-number{
+  position: relative;
+  color: var(--basic-white);
+}
+.marker-pulse:before {
+    content: "";
+    display: block;
+    background: var(--primary-light);
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: auto;
+    border-radius: 50%;
+    top: 2px;
+    /* bottom: 0; */
+    position: relative;
+    border: 2px solid #fff;
+    z-index: -6;
+}
+.timeline-step.visible .step-marker, .step-marker:hover{
+  box-shadow: 0 0 0 3px var(--primary), 0 0 30px var(--primary),
+    0 0 60px rgba(99, 102, 241, 0.3);
+}
 }
 
 /* Dark Theme Support */
 html[data-theme="dark"] {
+
+  .tab-content{
+    border:  1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: none;
+  }
   .service-card .fold-corner::after {
     border-color: var(--surface-0) var(--surface-0) rgba(0, 247, 255, 0.05)
       rgba(0, 247, 255, 0.05);
