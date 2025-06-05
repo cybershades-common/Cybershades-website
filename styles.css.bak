@@ -1717,7 +1717,8 @@ section {
   background-color: var(--surface-1);
   border-radius: var(--radius-lg);
   padding: var(--space-6);
-  border: none;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border);
   transition: var(--transition-normal);
   position: relative;
   overflow: hidden;
@@ -2468,7 +2469,8 @@ section {
   background-color: var(--surface-1);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  overflow: hidden;  
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
   transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
   position: relative;
 }
@@ -2488,6 +2490,7 @@ section {
 
 .team-card:hover {
   transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
   border-color: var(--primary);
 }
 
@@ -2636,6 +2639,7 @@ section {
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: var(--space-8);
+  box-shadow: var(--shadow-md);
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -2934,7 +2938,7 @@ section {
   position: relative;
   display: flex;
   align-items: center;
-  margin-bottom: 75px;
+  margin-bottom: 150px;
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 0.8s var(--transition-slow),
@@ -3015,11 +3019,7 @@ section {
   left: 50%;
   width: var(--marker-size);
   height: var(--marker-size);
-  background: radial-gradient(
-    circle,
-    rgba(0, 0, 0, 0.4) 0%,
-    rgba(0, 0, 0, 0.7) 100%
-  );
+  background: var(--basic-white);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -3039,10 +3039,10 @@ section {
 
 .marker-pulse {
   position: absolute;
+  background: var(--primary-dark);
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: transparent;
   box-shadow: 0 0 0 0 #00f7ff;
   transform: scale(1);
   animation: pulse 2s infinite;
@@ -3051,7 +3051,7 @@ section {
 @keyframes pulse {
   0% {
     transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.4);
+    box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.5);
   }
 
   70% {
@@ -3061,7 +3061,7 @@ section {
 
   100% {
     transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(99, 102, 241, 0);
+    box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.4);
   }
 }
 
@@ -3069,7 +3069,8 @@ section {
   font-family: var(--font-display);
   font-size: 1.5rem;
   font-weight: 800;
-  color: var(--primary);
+  color: var(--basic-white);
+  position: relative;
   text-shadow: 0 0 10px var(--primary-glow);
 }
 
@@ -3139,6 +3140,7 @@ section {
   padding: 25px 30px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-xl), inset 0 1px 1px rgba(255, 255, 255, 0.1);
   transform: scale(0.95) rotateY(var(--rotate-y, 0deg));
   transition: all 0.5s var(--transition-slow);
   overflow: hidden;
@@ -3255,7 +3257,8 @@ section {
 /* ===== HOVER EFFECTS ===== */
 .content-panel:hover {
   transform: scale(1.02) translateZ(10px);
-
+  box-shadow: var(--shadow-xl), 0 3px 7px rgba(0, 0, 0, 0.3),
+    inset 0 1px 1px rgba(255, 255, 255, 0.2);
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
@@ -3773,11 +3776,13 @@ section {
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: var(--radius-lg);
   overflow: hidden;
+  box-shadow: var(--shadow-lg);
   transition: all var(--transition-normal);
 }
 
 .blog-card:hover {
   transform: translateY(-10px);
+  box-shadow: var(--shadow-xl);
   border-color: rgba(99, 102, 241, 0.3);
 }
 
@@ -3901,11 +3906,12 @@ section {
   border-radius: var(--radius-lg);
   margin-bottom: var(--space-4);
   overflow: hidden;
+  box-shadow: var(--shadow-md);
   transition: all var(--transition-normal);
 }
 
 .faq-item:hover {
-
+  box-shadow: var(--shadow-lg);
   border-color: rgba(99, 102, 241, 0.3);
 }
 
@@ -4007,11 +4013,13 @@ section {
   border-radius: var(--radius-lg);
   padding: var(--space-4) var(--space-6);
   margin-bottom: var(--space-4);
+  box-shadow: var(--shadow-md);
   transition: all var(--transition-normal);
 }
 
 .contact-card:hover {
-  transform: translateY(-5px); 
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
   border-color: rgba(99, 102, 241, 0.3);
 }
 
@@ -4046,7 +4054,7 @@ section {
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: var(--radius-lg);
   padding: var(--space-4) var(--space-6);
-  
+  box-shadow: var(--shadow-md);
 }
 
 .contact-social h3 {
@@ -4067,7 +4075,7 @@ section {
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: var(--radius-lg);
   padding: var(--space-8);
-  
+  box-shadow: var(--shadow-lg);
 }
 
 .form-group {
@@ -4765,29 +4773,8 @@ theme-switch input:checked:active + .slider::before {
   justify-content: center;
 }
 
-.service-card .fold-corner::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 0;
-  border-style: solid;
-  border-width: 0.5rem;
-  border-radius:0 0 0 0.2rem; 
-  transition: all 0.4s;
-}
-.service-card:hover .fold-corner::after {
-  border-width: 2.5rem;
-  border-radius:0 0 0 0.5rem;
-}
-
 /* Light Theme Support */
 html[data-theme="light"] {
-
-  .service-card .fold-corner::after {
- border-color: var(--surface-0) var(--surface-0) var(--basic-white) var(--basic-white);
-  }
-
-
   .logo-text img {
     filter: invert(0);
   }
@@ -4851,7 +4838,7 @@ html[data-theme="light"] {
     border-color: #eee;
     box-shadow: var(--card-shadow-light);
   }
- .btn-outline:hover {
+  .hero-content .hero-cta .btn-outline:hover {
     background: var(--primary-dark);
     color: var(--basic-white);
   }
@@ -4859,16 +4846,13 @@ html[data-theme="light"] {
 
 /* Dark Theme Support */
 html[data-theme="dark"] {
-  .service-card .fold-corner::after {
-    border-color: var(--surface-0) var(--surface-0) rgba(0, 247, 255, 0.05)
-      rgba(0, 247, 255, 0.05);
-  }
   .cs-portfolio-card {
     background-color: rgba(30, 41, 59, 0.5);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: var(--radius-lg);
-    overflow: hidden;   
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
     transition: all var(--transition-normal);
   }
   .theme-switch .slider::before {
@@ -4923,9 +4907,10 @@ html[data-theme="dark"] {
   .service-card {
     background-color: rgba(30, 41, 59, 0.5);
     backdrop-filter: blur(10px);
-    /* border: 1px solid rgba(255, 255, 255, 0.05);*/
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: var(--radius-lg);
     overflow: hidden;
+    box-shadow: var(--shadow-lg);
     transition: all var(--transition-normal);
   }
 
@@ -4937,6 +4922,7 @@ html[data-theme="dark"] {
   .service-card:hover,
   .cs-portfolio-card:hover {
     transform: translateY(-10px) !important;
+    box-shadow: var(--shadow-xl);
   }
 
   .team-card:hover {
@@ -4986,6 +4972,7 @@ html[data-theme="dark"] {
   .service-card:hover,
   .cs-portfolio-card:hover {
     transform: translateY(-10px) !important;
+    box-shadow: var(--shadow-xl);
   }
 
   .team-card:hover {
@@ -5029,10 +5016,20 @@ html[data-theme="dark"] {
   .contact-icon {
     background: var(--primary-dark);
   }
-  .faq-icon{
-    color: var(--primary-dark);
-  }
-  .faq-item.active .faq-icon{
-    background: var(--primary-dark);
-  }
+}
+.service-card .fold-corner::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-style: solid;
+  border-width: 0.5rem;
+  border-radius: 0.2rem;
+  border-color: var(--surface-0) var(--surface-0) rgba(0, 247, 255, 0.05)
+    rgba(0, 247, 255, 0.05);
+  transition: all 0.4s;
+}
+.service-card:hover .fold-corner::after {
+  border-width: 3rem;
+  border-radius: 0.5rem;
 }

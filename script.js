@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initFAQ();
     initBackToTop();
     initContactForm();
+    initTechTabs();
 });
 
 // Preloader
@@ -28,6 +29,43 @@ function initPreloader() {
     }, 1500);
 }
 
+// Theme Management
+function initTheme() {
+    const themeSwitch = document.querySelector('.theme-switch input');
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    
+    // Get theme from localStorage or use system preference
+    const currentTheme = localStorage.getItem('theme') || 
+                        (prefersDarkScheme.matches ? 'dark' : 'light');
+    
+    // Apply the current theme
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    
+    // Update the switch state
+    if (themeSwitch) {
+        themeSwitch.checked = (currentTheme === 'dark');
+        
+        // Add event listener for theme toggle
+        themeSwitch.addEventListener('change', function() {
+            const newTheme = this.checked ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            
+            // Dispatch custom event for any components that need to update
+            document.dispatchEvent(new CustomEvent('themeChanged', { 
+                detail: { theme: newTheme }
+            }));
+        });
+    }
+    
+    // Listen for system theme changes
+    prefersDarkScheme.addListener(e => {
+        if (!localStorage.getItem('theme')) {
+            document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+        }
+    });
+}
+
 // Navigation
 function initNavigation() {
     const navbar = document.querySelector('.navbar');
@@ -35,7 +73,9 @@ function initNavigation() {
     const mobileMenu = document.querySelector('.mobile-menu');
     const navLinks = document.querySelectorAll('.nav-link');
     const mobileLinks = document.querySelectorAll('.mobile-nav-link');
-    const themeSwitch = document.querySelector('.theme-switch');
+    
+    // Initialize theme
+    initTheme();
     
     // Scroll event for navbar
     window.addEventListener('scroll', () => {
@@ -340,6 +380,32 @@ function initBackToTop() {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
+        });
+    });
+}
+
+// Initialize tech tabs
+function initTechTabs() {
+    const tabButtons = document.querySelectorAll('.tech-tabs .tab-btn');
+    const tabPanes = document.querySelectorAll('.tech-tabs .tab-pane');
+
+    if (tabButtons.length === 0 || tabPanes.length === 0) return;
+
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons and panes
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            tabPanes.forEach(pane => pane.classList.remove('active'));
+
+            // Add active class to clicked button
+            button.classList.add('active');
+
+            // Show the corresponding tab pane
+            const tabId = button.getAttribute('data-tab');
+            const tabPane = document.getElementById(tabId);
+            if (tabPane) {
+                tabPane.classList.add('active');
+            }
         });
     });
 }
