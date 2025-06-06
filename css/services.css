@@ -148,14 +148,6 @@
   font-weight: 600;
 }
 
-.cs-hero-title {
-  font-size: 4rem;
-  font-weight: 800;
-  line-height: 1.1;
-  margin-bottom: 30px;
-  color: var(--text-primary);
-}
-
 .cs-text-hologram {
   background: var(--gradient-primary);
   -webkit-background-clip: text;
@@ -178,12 +170,6 @@
   }
 }
 
-.cs-hero-description {
-  font-size: 1.25rem;
-  color: var(--text-secondary);
-  line-height: 1.7;
-  margin-bottom: 40px;
-}
 
 .cs-hero-stats {
   display: flex;
@@ -410,6 +396,7 @@
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: var(--space-6);
   max-width: 1200px;
+  padding: 0 1rem;
   margin: 0 auto;
 }
 
@@ -730,8 +717,7 @@
   line-height: 1.3;
 }
 
-.service-description {
-  font-size: 0.875rem;
+.service-description { 
   color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: var(--space-4);
@@ -1579,30 +1565,17 @@ html[data-theme="light"] .bg-glow:nth-child(4) {
 }
 
 @media (max-width: 1024px) {
-  .elite-services-grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-6);
-  }
-
-  .journey-phase {
-    flex-direction: column !important;
-    text-align: center !important;
-  }
-
-  .timeline-line {
-    display: none;
-  }
-
-  .phase-content::after {
-    display: none;
-  }
-
+   
+ 
   .phase-marker {
     margin: 0 0 var(--space-6) 0;
   }
 
   .consultation-showcase {
     padding: var(--space-8);
+  }
+  .feature-grid{
+    grid-template-columns:repeat(2, minmax(220px, 1fr));
   }
 }
 
@@ -1734,17 +1707,50 @@ html[data-theme="light"] .technology-showcase {
   pointer-events: auto;
 }
 
+@media (max-width:992px){
+  .journey-timeline .phase-marker{
+    position: absolute;
+    top:-24px;
+  }
+  .journey-timeline .phase-content{
+    max-width: 46%;
+  }
+  .feature-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .feature-content p{
+    margin: 0;
+  }
+}
 
 @media (max-width:767px){
 
     .journey-timeline .journey-phase{
-      margin-bottom: 2.5rem;
+      margin: 9rem 0px 0;
     }
-  .journey-timeline .journey-phase .phase-marker{
-    margin-bottom: 0;
+    .journey-timeline .phase-marker {
+      position: absolute;
+      top: -5rem;
+      left: 0;
+      right: 0;
+      margin: auto;
   }
    .journey-timeline .journey-phase .phase-content{
     margin-top: -2.5rem;
     padding-top: 4.5rem;
    }
+   .categories-wrapper{
+    grid-template-columns: repeat(2, 1fr);
+   }
+   .feature-grid,
+   .elite-services-grid{
+    grid-template-columns: repeat(1, 1fr);
+   }
+   .journey-timeline .phase-content{
+    max-width: 100%;
+   }
+   .feature-item{
+    padding: var(--space-6);
+   }
+ 
 }

@@ -1128,6 +1128,7 @@ a.underline-effect:hover::after {
 .hero-stats {
   display: flex;
   gap: var(--space-8);
+  margin-bottom: 2rem;
 }
 
 .stat-item {
@@ -2375,9 +2376,6 @@ section {
     font-size: 1.2rem;
   }
 
-  .cs-project-description {
-    font-size: 0.9rem;
-  }
 
   .cs-tech-stack {
     gap: 6px;
@@ -2618,8 +2616,7 @@ section {
 
 .team-bio {
   color: var(--text-secondary);
-  font-size: 0.9rem;
-  margin-bottom: 0;
+    margin-bottom: 0;
   transition: all 0.3s ease;
 }
 
@@ -3724,8 +3721,7 @@ section {
 
 .blog-excerpt {
   color: var(--text-secondary);
-  font-size: 0.9rem;
-  margin-bottom: var(--space-4);
+    margin-bottom: var(--space-4);
 }
 
 .blog-link {
@@ -3862,9 +3858,7 @@ section {
     padding: 0 var(--space-4) var(--space-4);
   }
 
-  .faq-question h3 {
-    font-size: 1rem;
-  }
+
 }
 
 /* ===== CONTACT SECTION ===== */
@@ -5059,13 +5053,30 @@ html[data-theme="dark"] {
   .team-grid {
     grid-template-columns: repeat(1, minmax(300px, 1fr));
 }
+.category-card{
+  padding:var(--space-6) var(--space-4);
+}
+.highlight-item {
+  font-size: .875rem;
+}
+.highlight-item i{
+  margin-top: 3px;
+}
+.tech-label{
+  font-size: .875rem;
+}
+.tech-item{
+  font-size: .75rem;
+}
+.tech-card{
+  padding: 1.5rem;
+}
+
 }
 
 
 @media screen and (max-width: 576px) {
-  html {
-    font-size: 13px;
-  }
+ 
 
   h1 {
     font-size: 2rem;
