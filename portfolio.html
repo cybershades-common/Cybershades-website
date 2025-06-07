@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | CyberShades | Showcasing Digital Excellence</title>
+    <meta
+      name="description"
+      content="Explore CyberShades' portfolio of innovative software solutions, mobile apps, and digital transformation projects delivered for clients worldwide."
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/portfolio.css" />
+  </head>
+  <body>
+    <!-- Particles Background -->
+    <div class="particles-wrapper">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-wrapper">
+          <a href="/" class="logo">
+            <span class="logo-text"
+              ><img src="img/CS-logo.png" alt="CyberShades"
+            /></span>
+          </a>
+          <div class="navbar-links">
+            <ul class="nav-menu">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="services.html" class="nav-link">Services</a>
+              </li>
+              <li class="nav-item">
+                <a href="techno.html" class="nav-link">Technologies</a>
+              </li>
+              <li class="nav-item">
+                <a href="portfolio.html" class="nav-link active">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a href="team.html" class="nav-link">Team</a>
+              </li>
+              <li class="nav-item">
+                <a href="testimonial.html" class="nav-link">Testimonials</a>
+              </li>
+              <li class="nav-item">
+                <a href="contact.html" class="nav-link">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <label class="theme-switch" for="theme-toggle">
+            <input
+              type="checkbox"
+              id="theme-toggle"
+              aria-label="Toggle theme"
+            />
+            <span class="slider"></span>
+          </label>
+          <div class="mobile-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+      <div class="mobile-menu-container">
+        <ul class="mobile-nav-menu">
+          <li class="mobile-nav-item">
+            <a href="index.html" class="mobile-nav-link">Home</a>
+          </li>
+          <li class="mobile-nav-item">
+            <a href="services.html" class="mobile-nav-link">Services</a>
+          </li>
+          <li class="mobile-nav-item">
+            <a href="techno.html" class="mobile-nav-link">Technologies</a>
+          </li>
+          <li class="mobile-nav-item">
+            <a href="portfolio.html" class="mobile-nav-link">Portfolio</a>
+          </li>
+          <li class="mobile-nav-item">
+            <a href="team.html" class="mobile-nav-link">Team</a>
+          </li>
+          <li class="mobile-nav-item">
+            <a href="testimonials.html" class="mobile-nav-link">Testimonials</a>
+          </li>
+          <li class="mobile-nav-item">
+            <a href="contact.html" class="mobile-nav-link">Contact</a>
+          </li>
+        </ul>
+        <div class="mobile-contact">
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <span>+91 98765 43210</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>info@cybershades.com</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Tech Hub, C-Scheme, Jaipur</span>
+          </div>
+          <div class="mobile-social">
+            <a href="#" class="social-icon"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Hero Section -->
+    <section id="home" class="hero portfolio-hero">
+      <div class="hero-bg"></div>
+      <div class="container">
+        <div class="hero-wrapper">
+          <div class="hero-content" data-aos="fade-up">
+            <div class="hero-subtitle">Our Digital Craftmanship</div>
+            <h1 class="hero-title">
+              Where Innovation
+              <span class="text-gradient">Meets Excellence</span>
+            </h1>
+            <p class="hero-description">
+              Every project in our portfolio represents a unique journey of
+              transformation, where cutting-edge technology converges with
+              creative vision to deliver extraordinary digital experiences that
+              redefine industry standards.
+            </p>
+            <div class="hero-cta">
+              <a href="#portfolio" class="btn btn-primary">
+                <span>Explore Portfolio</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+              <a href="#contact" class="btn btn-outline">
+                <span>Start Your Project</span>
+              </a>
+            </div>
+          </div>
+          <div class="hero-visual" data-aos="zoom-in" data-aos-delay="300">
+            <div class="portfolio-workspace">
+              <div class="main-screen">
+                <div class="screen-header">
+                  <div class="screen-controls">
+                    <span class="control-dot red"></span>
+                    <span class="control-dot yellow"></span>
+                    <span class="control-dot green"></span>
+                  </div>
+                  <div class="screen-title">Portfolio Showcase</div>
+                </div>
+                <div class="screen-content">
+                  <div class="project-preview active" data-project="1">
+                    <img src="img/ecommerce.jpg" alt="E-commerce Platform" />
+                    <div class="project-info">
+                      <h4>E-commerce Platform</h4>
+                      <span>React • Node.js • AWS</span>
+                    </div>
+                  </div>
+                  <div class="project-preview" data-project="2">
+                    <img src="img/healthcare-app.jpg" alt="Healthcare App" />
+                    <div class="project-info">
+                      <h4>Healthcare Mobile App</h4>
+                      <span>React Native • Firebase</span>
+                    </div>
+                  </div>
+                  <div class="project-preview" data-project="3">
+                    <img src="img/ai-power.jpg" alt="AI Analytics" />
+                    <div class="project-info">
+                      <h4>AI Analytics Platform</h4>
+                      <span>Python • TensorFlow</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="side-panels">
+                <div class="code-panel">
+                  <div class="panel-header">Development</div>
+                  <div class="code-lines">
+                    <div class="code-line"></div>
+                    <div class="code-line short"></div>
+                    <div class="code-line medium"></div>
+                    <div class="code-line"></div>
+                    <div class="code-line short"></div>
+                  </div>
+                </div>
+                <div class="analytics-panel">
+                  <div class="panel-header">Analytics</div>
+                  <div class="chart-bars">
+                    <div class="chart-bar" style="height: 40%"></div>
+                    <div class="chart-bar" style="height: 70%"></div>
+                    <div class="chart-bar" style="height: 30%"></div>
+                    <div class="chart-bar" style="height: 90%"></div>
+                    <div class="chart-bar" style="height: 60%"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="workspace-controls">
+                <button class="control-btn active" data-target="1">01</button>
+                <button class="control-btn" data-target="2">02</button>
+                <button class="control-btn" data-target="3">03</button>
+              </div>
+            </div>
+            <div class="floating-card card-1">
+              <div class="icon"><i class="fas fa-code"></i></div>
+              <div class="text">Clean Architecture</div>
+            </div>
+            <div class="floating-card card-2">
+              <div class="icon"><i class="fas fa-rocket"></i></div>
+              <div class="text">High Performance</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-indicator">
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+        <div class="arrow">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Filter Section -->
+    <section class="technologies">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <div class="section-subtitle">Browse Projects</div>
+          <h2 class="section-title">
+            Explore by <span class="gradient-text">Category</span>
+          </h2>
+          <p class="section-description">
+            Discover our diverse portfolio of projects across various industries
+            and technologies
+          </p>
+        </div>
+        <div class="portfolio-filter" data-aos="fade-up">
+          <div class="tab-buttons">
+            <button class="tab-btn filter-btn active" data-filter="all">
+              All Projects
+            </button>
+            <button class="tab-btn filter-btn" data-filter="web">
+              Web Apps
+            </button>
+            <button class="tab-btn filter-btn" data-filter="mobile">
+              Mobile
+            </button>
+            <button class="tab-btn filter-btn" data-filter="ai">AI & ML</button>
+            <button class="tab-btn filter-btn" data-filter="cloud">
+              Cloud
+            </button>
+            <button class="tab-btn filter-btn" data-filter="enterprise">
+              Enterprise
+            </button>
+            <hr />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section id="portfolio" class="cs-portfolio">
+      <div class="container">
+        <div class="cs-portfolio-grid" data-aos="fade-up">
+          <!-- Project Cards -->
+          <div
+            class="cs-portfolio-card portfolio-item"
+            data-category="web"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="cs-card-image">
+              <img src="img/ecommerce.jpg" alt="E-commerce Platform" />
+            </div>
+            <div class="cs-card-content">
+              <div class="cs-card-header">
+                <span class="cs-category">Web Development</span>
+                <span class="cs-year">2024</span>
+              </div>
+              <h3 class="cs-project-title">E-commerce Platform</h3>
+              <p class="cs-project-description">
+                A high-performance e-commerce platform with advanced search,
+                personalized recommendations, and seamless payment integration
+                for enhanced user experience.
+              </p>
+              <div class="cs-tech-stack">
+                <span class="cs-tech-item">React</span>
+                <span class="cs-tech-item">Node.js</span>
+                <span class="cs-tech-item">MongoDB</span>
+                <span class="cs-tech-item">AWS</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="cs-portfolio-card portfolio-item"
+            data-category="mobile"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="cs-card-image">
+              <img src="img/healthcare-app.jpg" alt="Healthcare Mobile App" />
+            </div>
+            <div class="cs-card-content">
+              <div class="cs-card-header">
+                <span class="cs-category">Mobile App</span>
+                <span class="cs-year">2024</span>
+              </div>
+              <h3 class="cs-project-title">Healthcare App</h3>
+              <p class="cs-project-description">
+                A comprehensive telemedicine application connecting patients
+                with healthcare providers through secure video consultations and
+                real-time health monitoring.
+              </p>
+              <div class="cs-tech-stack">
+                <span class="cs-tech-item">React Native</span>
+                <span class="cs-tech-item">Firebase</span>
+                <span class="cs-tech-item">WebRTC</span>
+                <span class="cs-tech-item">ML Kit</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="cs-portfolio-card portfolio-item"
+            data-category="ai"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="cs-card-image">
+              <img src="img/ai-power.jpg" alt="AI Analytics Platform" />
+            </div>
+            <div class="cs-card-content">
+              <div class="cs-card-header">
+                <span class="cs-category">AI & ML</span>
+                <span class="cs-year">2024</span>
+              </div>
+              <h3 class="cs-project-title">AI Analytics Platform</h3>
+              <p class="cs-project-description">
+                Advanced AI-driven analytics platform that transforms raw
+                business data into actionable insights with predictive modeling
+                and intelligent automation.
+              </p>
+              <div class="cs-tech-stack">
+                <span class="cs-tech-item">Python</span>
+                <span class="cs-tech-item">TensorFlow</span>
+                <span class="cs-tech-item">Apache Spark</span>
+                <span class="cs-tech-item">Docker</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="cs-portfolio-card portfolio-item"
+            data-category="cloud"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="cs-card-image">
+              <img src="img/cloud-computing.jpg" alt="Cloud Migration" />
+            </div>
+            <div class="cs-card-content">
+              <div class="cs-card-header">
+                <span class="cs-category">Cloud Solutions</span>
+                <span class="cs-year">2023</span>
+              </div>
+              <h3 class="cs-project-title">Enterprise Cloud Migration</h3>
+              <p class="cs-project-description">
+                Complete digital transformation with seamless migration of
+                legacy enterprise systems to AWS cloud infrastructure achieving
+                99.9% uptime.
+              </p>
+              <div class="cs-tech-stack">
+                <span class="cs-tech-item">AWS</span>
+                <span class="cs-tech-item">Kubernetes</span>
+                <span class="cs-tech-item">Terraform</span>
+                <span class="cs-tech-item">Jenkins</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="cs-portfolio-card portfolio-item"
+            data-category="web"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
+            <div class="cs-card-image">
+              <img
+                src="img/financial-dashboard.jpg"
+                alt="Financial Dashboard"
+              />
+            </div>
+            <div class="cs-card-content">
+              <div class="cs-card-header">
+                <span class="cs-category">Web Development</span>
+                <span class="cs-year">2024</span>
+              </div>
+              <h3 class="cs-project-title">Financial Dashboard</h3>
+              <p class="cs-project-description">
+                Real-time financial analytics dashboard with interactive charts,
+                portfolio tracking, and advanced reporting capabilities for
+                investment management.
+              </p>
+              <div class="cs-tech-stack">
+                <span class="cs-tech-item">Vue.js</span>
+                <span class="cs-tech-item">D3.js</span>
+                <span class="cs-tech-item">Node.js</span>
+                <span class="cs-tech-item">PostgreSQL</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="cs-portfolio-card portfolio-item"
+            data-category="mobile"
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
+            <div class="cs-card-image">
+              <img src="img/logistic.jpg" alt="Logistics Tracker" />
+            </div>
+            <div class="cs-card-content">
+              <div class="cs-card-header">
+                <span class="cs-category">Mobile App</span>
+                <span class="cs-year">2023</span>
+              </div>
+              <h3 class="cs-project-title">Logistics Tracker</h3>
+              <p class="cs-project-description">
+                Comprehensive logistics management application with real-time
+                tracking, route optimization, and automated delivery
+                notifications for enhanced operational efficiency.
+              </p>
+              <div class="cs-tech-stack">
+                <span class="cs-tech-item">Flutter</span>
+                <span class="cs-tech-item">Google Maps</span>
+                <span class="cs-tech-item">Firebase</span>
+                <span class="cs-tech-item">IoT</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="cs-portfolio-card portfolio-item"
+            data-category="enterprise"
+            data-aos="fade-up"
+            data-aos-delay="700"
+          >
+            <div class="cs-card-image">
+              <img src="img/ai-blog-1.jpeg" alt="Enterprise CRM" />
+            </div>
+            <div class="cs-card-content">
+              <div class="cs-card-header">
+                <span class="cs-category">Enterprise</span>
+                <span class="cs-year">2024</span>
+              </div>
+              <h3 class="cs-project-title">Enterprise CRM System</h3>
+              <p class="cs-project-description">
+                Comprehensive customer relationship management system with
+                advanced analytics, workflow automation, and seamless
+                integration capabilities.
+              </p>
+              <div class="cs-tech-stack">
+                <span class="cs-tech-item">Angular</span>
+                <span class="cs-tech-item">.NET Core</span>
+                <span class="cs-tech-item">SQL Server</span>
+                <span class="cs-tech-item">Azure</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="cs-portfolio-card portfolio-item"
+            data-category="ai"
+            data-aos="fade-up"
+            data-aos-delay="800"
+          >
+            <div class="cs-card-image">
+              <img src="img/ai-blog-2.webp" alt="Computer Vision" />
+            </div>
+            <div class="cs-card-content">
+              <div class="cs-card-header">
+                <span class="cs-category">AI & ML</span>
+                <span class="cs-year">2023</span>
+              </div>
+              <h3 class="cs-project-title">Computer Vision System</h3>
+              <p class="cs-project-description">
+                AI-powered computer vision system for automated quality control
+                in manufacturing, reducing defects by 95% and improving
+                production efficiency.
+              </p>
+              <div class="cs-tech-stack">
+                <span class="cs-tech-item">OpenCV</span>
+                <span class="cs-tech-item">PyTorch</span>
+                <span class="cs-tech-item">FastAPI</span>
+                <span class="cs-tech-item">Redis</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="cs-portfolio-card portfolio-item"
+            data-category="web"
+            data-aos="fade-up"
+            data-aos-delay="900"
+          >
+            <div class="cs-card-image">
+              <img src="img/blog-3.webp" alt="SaaS Platform" />
+            </div>
+            <div class="cs-card-content">
+              <div class="cs-card-header">
+                <span class="cs-category">Web Development</span>
+                <span class="cs-year">2024</span>
+              </div>
+              <h3 class="cs-project-title">SaaS Analytics Platform</h3>
+              <p class="cs-project-description">
+                Multi-tenant SaaS platform providing comprehensive business
+                analytics with customizable dashboards, real-time reporting, and
+                API integrations.
+              </p>
+              <div class="cs-tech-stack">
+                <span class="cs-tech-item">Next.js</span>
+                <span class="cs-tech-item">GraphQL</span>
+                <span class="cs-tech-item">Prisma</span>
+                <span class="cs-tech-item">Vercel</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="services">
+      <div class="container">
+        <div class="cta-card" data-aos="fade-up">
+          <div class="cta-content">
+            <h3>Ready to Start Your Next Project?</h3>
+            <p>
+              Let's collaborate to transform your vision into a digital reality.
+              Our team is ready to discuss your unique requirements and deliver
+              exceptional results.
+            </p>
+          </div>
+          <a href="contact.html" class="btn btn-white btn-shine">
+            <span>Start Your Project</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <div class="cta-shape-1"></div>
+          <div class="cta-shape-2"></div>
+        </div>
+      </div>
+    </section>
+    <!-- Premium Consultation Experience -->
+  <section class="premium-consultation">
+    <div class="container">
+      <div class="consultation-showcase" data-aos="fade-up">
+        <div class="showcase-background">
+          <div class="bg-pattern"></div>
+          <div class="bg-glow"></div>
+          <div class="bg-glow"></div>
+          <div class="bg-glow"></div>
+          <div class="bg-glow"></div>
+        </div>
+
+        <div class="consultation-content">
+          <div class="content-header">
+            <div class="header-icon">
+              <i class="fas fa-handshake"></i>
+            </div>
+            <h2 class="consultation-title">
+              Ready to Begin Your
+              <span class="gradient-text">Digital Journey?</span>
+            </h2>
+            <p class="consultation-description">
+              Transform your vision into reality with our expert guidance.
+              Schedule a personalized consultation to explore how we can
+              accelerate your business growth through technology.
+            </p>
+          </div>
+
+          <div class="consultation-features">
+            <div class="feature-grid">
+              <div class="feature-item">
+                <i class="fas fa-calendar-check"></i>
+                <div class="feature-content">
+                  <h4>Free Strategic Session</h4>
+                  <p>60-minute consultation with our senior experts</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-chart-line"></i>
+                <div class="feature-content">
+                  <h4>Custom Roadmap</h4>
+                  <p>Personalized technology strategy for your business</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-calculator"></i>
+                <div class="feature-content">
+                  <h4>Transparent Pricing</h4>
+                  <p>Detailed project estimate with no hidden costs</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-users"></i>
+                <div class="feature-content">
+                  <h4>Expert Team</h4>
+                  <p>
+                    Direct access to our senior architects and consultants
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="consultation-actions">
+            <button class="cta-primary">
+              <span>Schedule Free Consultation</span>
+              <i class="fas fa-calendar-alt"></i>
+            </button>
+            <button class="cta-secondary">
+              <span>Get Instant Quote</span>
+              <i class="fas fa-calculator"></i>
+            </button>
+          </div>
+
+          <div class="consultation-trust">
+            <div class="trust-stats">
+              <div class="trust-item">
+                <span class="trust-number">500+</span>
+                <span class="trust-label">Projects Delivered</span>
+              </div>
+              <div class="trust-item">
+                <span class="trust-number">98%</span>
+                <span class="trust-label">Client Satisfaction</span>
+              </div>
+              <div class="trust-item">
+                <span class="trust-number">24/7</span>
+                <span class="trust-label">Expert Support</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="consultation-visual">
+          <div class="visual-elements">
+            <div class="element element-1"></div>
+            <div class="element element-2"></div>
+            <div class="element element-3"></div>
+            <div class="element element-4"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-bg"></div>
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-about">
+            <a href="#" class="footer-logo">
+              <span class="logo-text">Cyber<span>Shades</span></span>
+            </a>
+            <p>
+              CyberShades is a leading IT services provider based in Jaipur,
+              delivering innovative technology solutions that empower businesses
+              to thrive in the digital age.
+            </p>
+            <div class="footer-social">
+              <a href="#" class="social-icon"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="footer-links">
+            <h3>Services</h3>
+            <ul>
+              <li><a href="#">Custom Software Development</a></li>
+              <li><a href="#">Mobile App Development</a></li>
+              <li><a href="#">Cloud Solutions</a></li>
+              <li><a href="#">Cybersecurity</a></li>
+              <li><a href="#">AI & Machine Learning</a></li>
+              <li><a href="#">IoT Solutions</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="team.html">Team</a></li>
+              <li><a href="testimonials.html">Testimonials</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span
+                >Tech Park Tower, 5th Floor<br />C-Scheme, Jaipur 302001<br />Rajasthan,
+                India</span
+              >
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>info@cybershades.com</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone-alt"></i>
+              <span>+91 98765 43210</span>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="copyright">
+            <p>&copy; 2025 CyberShades. All Rights Reserved.</p>
+          </div>
+          <div class="footer-bottom-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cookie Policy</a>
+            <a href="#">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script src="js/portfolio.js"></script>
+  </body>
+</html>
