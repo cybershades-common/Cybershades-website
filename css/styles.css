@@ -766,7 +766,6 @@ a.underline-effect:hover::after {
 }
 
 .btn-secondary {
-
   border: 1px solid var(--basic-white);
   color: var(--basic-white);
 }
@@ -4652,11 +4651,14 @@ html[data-theme="light"] {
     color: var(--primary-dark);
   }
 
-  .btn-secondary:hover i,
-  .btn-secondary:hover span {
-    color: var(--basic-white);
-  }
-
+  .btn-secondary {
+    border: 1px solid var(--primary-dark);
+    color: var(--primary-dark);
+}
+.btn-secondary:hover {
+ background-color: var(--primary-dark);
+ color: var(--basic-white);
+}
   .phase-content {
     background: var(--basic-white);
   }
