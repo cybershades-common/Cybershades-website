@@ -1984,19 +1984,20 @@ section {
 
 .tech-icon {
   width: 80px;
-  height: 80px;
+  padding: 1rem;
   border-radius: var(--radius-xl);
   background-color: var(--surface-2);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto var(--space-4);
+  margin: 0 auto;
   font-weight: 600;
   color: var(--primary);
   transition: all var(--transition-normal);
-  position: relative;
-  border: 1px solid var(--border);
+  position: relative; 
   z-index: 1;
+  font-size: 2rem;
+  font-weight: 300;
 }
 
 .tech-icon::before {
@@ -2008,17 +2009,12 @@ section {
   bottom: 0;
   border-radius: var(--radius-xl);
   padding: 1px;
-  background: var(--primary-light);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  opacity: 0;
   transition: opacity var(--transition-normal);
 }
 
 .tech-item:hover .tech-icon {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-md), 0 10px 20px rgba(99, 102, 241, 0.1);
+  transform: scale(1.5);
+ 
 }
 
 .tech-item:hover .tech-icon::before {
