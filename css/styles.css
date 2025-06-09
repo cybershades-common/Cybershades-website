@@ -4373,7 +4373,7 @@ section {
   position: relative;
   display: inline-flex;
   align-items: center;
-  width: 54px;
+  width: 26px;
   height: 26px;
   cursor: pointer;
   margin-left: 1rem;
@@ -4394,36 +4394,28 @@ section {
   right: 0;
   bottom: 0;
   background-color: var(--basic-black);
-  border: 1px solid var(--primary-dark);
+  border:none;
   border-radius: 24px;
   transition: all 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.theme-switch .slider::before {
-  content: "";
-  position: absolute;
-  width: 18px;
-  height: 18px;
-  left: 4px;
-  bottom: 3px;
-  background-color: aqua;
-  border-radius: 50%;
-  transition: transform 0.4s ease, background-color 0.4s ease;
-}
 
 /* Sun and Moon Icons */
 .theme-switch .slider::after {
-  content: "\f185";
-  /* Sun icon */
+  content: "\f186";
   font-family: var(--fontawesome);
   font-weight: 900;
   position: absolute;
-  right: 6px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 14px;
-  color: gold;
+  color:rgba(255, 255, 255, .925);
   transition: all 0.4s ease;
+  line-height: normal;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0.75rem;
 }
 
 /* Dark mode styles */
@@ -4437,13 +4429,14 @@ section {
   background-color: var(--primary);
 }
 
-.theme-switch input:checked+.slider::after {
-  content: "\f186";
-  /* Moon icon */
-  left: 8px;
-  right: auto;
-  color: var(--primary);
+
+  .theme-switch input:checked+.slider::after {
+    content: "\f185";
+    left: 0;
+    right: 0; 
+    width: 14px;
 }
+
 
 /* Hover effects */
 
@@ -4713,11 +4706,11 @@ html[data-theme="dark"] {
   }
 
   .theme-switch input:checked+.slider {
-    background: var(--basic-white);
+    background: rgba(255,255,255,0.275);
   }
 
   .theme-switch input:checked+.slider::after {
-    color: grey;
+    color: gold;
   }
 
   .cta-card {
