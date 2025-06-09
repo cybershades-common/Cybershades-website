@@ -4545,7 +4545,9 @@ section {
   display: none;
 }
 
-
+.no-hero{
+  padding-top: 120px;
+}
 /* Light Theme Support */
 html[data-theme="light"] {
   .service-card .fold-corner::after {
