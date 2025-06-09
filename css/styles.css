@@ -1963,8 +1963,7 @@ section {
 }
 
 .tab-content {
-  background-color: var(--surface-1);
-  border-radius: var(--radius-lg);
+  background-color: var(--surface-1); 
   padding: var(--space-8);
   box-shadow: var(--shadow-lg), 0 -5px 15px rgba(99, 102, 241, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
