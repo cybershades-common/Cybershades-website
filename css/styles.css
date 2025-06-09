@@ -5101,7 +5101,9 @@ html[data-theme="dark"] {
   .step-description {
     font-size: 1rem;
   }
-
+  .tab-buttons{
+    margin-bottom: 0;
+  }
   .tab-btn {
     font-size: 0;
     padding: 0;
