@@ -78,6 +78,33 @@ function initNavigation() {
     // Initialize theme
     initTheme();
     
+    // Set active navigation link based on current page
+    function setActiveNavLink() {
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        
+        navLinks.forEach(link => {
+            // Get the filename from the href attribute
+            const linkHref = link.getAttribute('href');
+            const linkPage = linkHref.split('/').pop();
+            const navItem = link.closest('.nav-item');
+            
+            // Remove active class from all links and their parent nav-items
+            link.classList.remove('active');
+            if (navItem) navItem.classList.remove('active');
+            
+            // Add active class to current page link and its parent nav-item
+            if (linkPage === currentPage || 
+                (currentPage === '' && linkPage === 'index.html') ||
+                (currentPage.includes(linkPage.replace('.html', '')) && linkPage !== 'index.html')) {
+                link.classList.add('active');
+                if (navItem) navItem.classList.add('active');
+            }
+        });
+    }
+    
+    // Set active nav link on page load
+    setActiveNavLink();
+    
     // Scroll event for navbar
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {

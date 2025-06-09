@@ -851,12 +851,12 @@ a.underline-effect:hover::after {
 }
 
 .nav-link:hover,
-.nav-link.active {
+.nav-item.active .nav-link{
   color: var(--primary-dark);
 }
 
 .nav-link:hover::after,
-.nav-link.active::after {
+.nav-item.active .nav-link::after {
   width: 100%;
 }
 
@@ -1932,7 +1932,7 @@ section {
   flex: 1;
 }
 
-<<<<<<< HEAD
+
 .tab-btn:first-child.active~hr {
   left: 0;
 }
@@ -1954,35 +1954,6 @@ section {
 }
 
 .tab-btn:nth-child(6).active~hr {
-=======
-.tab-btn:first-child.active ~ hr,
-.tab-btn:first-child:hover ~ hr {
-  left: 0;
-}
-
-.tab-btn:nth-child(2).active ~ hr,
-.tab-btn:nth-child(2):hover ~ hr {
-  left: 16.67%;
-}
-
-.tab-btn:nth-child(3).active ~ hr,
-.tab-btn:nth-child(3):hover ~ hr {
-  left: 33.34%;
-}
-
-.tab-btn:nth-child(4).active ~ hr,
-.tab-btn:nth-child(4):hover ~ hr {
-  left: 50%;
-}
-
-.tab-btn:nth-child(5).active ~ hr,
-.tab-btn:nth-child(5):hover ~ hr {
-  left: 66.67%;
-}
-
-.tab-btn:nth-child(6).active ~ hr,
-.tab-btn:nth-child(6):hover ~ hr {
->>>>>>> 8086b78f3a5031732236ffeb6ae170147f478a73
   left: 83.34%;
 }
 
