@@ -1,7 +1,6 @@
 /* Technologies Hero Section */
 .no-hero {
   position: relative;
-  min-height: 80vh;
   display: flex;
   align-items: center;
   background: linear-gradient(

@@ -940,6 +940,7 @@ a.underline-effect:hover::after {
 .mobile-social {
   display: flex;
   margin-top: var(--space-6);
+  gap: 0.5rem;
 }
 
 .social-icon {
@@ -4528,6 +4529,9 @@ html[data-theme="light"] {
   .service-card .fold-corner::after {
     border-color: var(--surface-0) var(--surface-0) var(--basic-white) var(--basic-white);
   }
+  .stat-block{
+    background: none;
+  }
 
   .service-categories-nav::before {
     background: transparent;
@@ -4667,8 +4671,14 @@ html[data-theme="light"] {
     color: var(--basic-white);
   }
   .cta-card .btn-secondary:hover{
-    border-color:var(--primary-dark);
-  
+    border-color:var(--primary-dark);  
+  }
+  .mobile-social .social-icon{
+    background-color: var(--primary-light);  
+  }
+  .mobile-social .social-icon:hover{
+    color: var(--basic-white);  
+    background-color: var(--primary-dark);
   }
 }
 
@@ -4828,7 +4838,6 @@ html[data-theme="dark"] {
     background: var(--primary-dark);
   }
 
-
 }
 
 /* ===== RESPONSIVE ADJUSTMENTS ===== */
@@ -4913,6 +4922,10 @@ html[data-theme="dark"] {
 }
 
 @media screen and (max-width: 767px) {
+  
+.cs-hero-visual[data-aos].aos-animate{
+  transform: scale(.85);
+}
   .marker-glow {
     left: -25%;
     top: -25%;
@@ -4924,7 +4937,7 @@ html[data-theme="dark"] {
   }
 
   .menu-active .theme-switch {
-    left: -22%;
+    left: -16%;
   }
 
   .contact-wrapper {
