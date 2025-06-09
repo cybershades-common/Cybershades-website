@@ -4662,6 +4662,14 @@ html[data-theme="light"] {
   .phase-content {
     background: var(--basic-white);
   }
+  .cta-card .btn-secondary{
+    border-color:var(--basic-white);
+    color: var(--basic-white);
+  }
+  .cta-card .btn-secondary:hover{
+    border-color:var(--primary-dark);
+  
+  }
 }
 
 /* Dark Theme Support */
