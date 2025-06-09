@@ -211,6 +211,8 @@
   color: var(--text-secondary);
   border: 1px solid var(--border);
   transition: all var(--transition-normal);
+  gap: 1rem;
+  text-align: center;
 }
 
 .office-image::before {
@@ -281,7 +283,8 @@ html[data-theme="light"] .office-image {
   text-align: center;
   gap: 1rem;
 }
-html[data-theme="light"] .office-image{
+
+.office-image {
   padding: 4rem;
 }
 
@@ -319,7 +322,7 @@ html[data-theme="light"] .office-image:hover i {
     display: none;
   }
 
-  html[data-theme="light"] .office-image{
+  .office-image {
     padding: 2rem;
   }
 
@@ -329,4 +332,5 @@ html[data-theme="light"] .office-image:hover i {
   .office-gallery {
     grid-template-columns: repeat(2, 1fr);
   }
+
 }

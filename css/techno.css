@@ -878,6 +878,12 @@
     padding: var(--space-12) 0;
   }
 }
+@media (max-width:767px){
+  .methodology-steps,
+  .technologies-grid {
+    grid-template-columns: repeat(1,1fr);
+}
+}
 
 @media (max-width: 480px) {
   .categories-wrapper {
@@ -889,6 +895,7 @@
     gap: var(--space-2);
     align-items: flex-start;
   }
+
 }
 
 /* Light Theme Adjustments */
