@@ -31,25 +31,35 @@ function initPreloader() {
 
 // Theme Management
 function initTheme() {
-    const themeSwitch = document.querySelector('.theme-switch input');
+    const themeToggle = document.getElementById('theme-toggle');
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
     
     // Get theme from localStorage or use system preference
-    const currentTheme = localStorage.getItem('theme') || 
-                        (prefersDarkScheme.matches ? 'dark' : 'light');
+    let currentTheme = localStorage.getItem('theme');
+    
+    // If no theme in localStorage, use system preference
+    if (!currentTheme) {
+        currentTheme = prefersDarkScheme.matches ? 'dark' : 'light';
+        localStorage.setItem('theme', currentTheme);
+    }
     
     // Apply the current theme
     document.documentElement.setAttribute('data-theme', currentTheme);
     
-    // Update the switch state
-    if (themeSwitch) {
-        themeSwitch.checked = (currentTheme === 'dark');
+    // Add event listener for theme toggle
+    if (themeToggle) {
+        themeToggle.setAttribute('aria-label', `Switch to ${currentTheme === 'dark' ? 'light' : 'dark'} mode`);
         
-        // Add event listener for theme toggle
-        themeSwitch.addEventListener('change', function() {
-            const newTheme = this.checked ? 'dark' : 'light';
+        themeToggle.addEventListener('click', function() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            // Update the theme
             document.documentElement.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
+            
+            // Update ARIA label
+            this.setAttribute('aria-label', `Switch to ${newTheme === 'dark' ? 'light' : 'dark'} mode`);
             
             // Dispatch custom event for any components that need to update
             document.dispatchEvent(new CustomEvent('themeChanged', { 
@@ -58,10 +68,14 @@ function initTheme() {
         });
     }
     
-    // Listen for system theme changes
+    // Listen for system theme changes (only if user hasn't explicitly set a preference)
     prefersDarkScheme.addListener(e => {
         if (!localStorage.getItem('theme')) {
-            document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+            const newTheme = e.matches ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            document.dispatchEvent(new CustomEvent('themeChanged', { 
+                detail: { theme: newTheme }
+            }));
         }
     });
 }

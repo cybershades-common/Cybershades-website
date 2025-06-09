@@ -886,7 +886,7 @@ a.underline-effect:hover::after {
   right: -100%;
   width: 300px;
   height: 100vh;
-  /* background: var(--surface-1);*/
+  background: var(--surface-1);
   backdrop-filter: blur(10px);
   z-index: var(--z-50);
   transition: right var(--transition-normal);
@@ -1994,7 +1994,7 @@ section {
   padding: 1rem;
   padding: 1rem;
   border-radius: var(--radius-xl);
-  background-color: var(--surface-2);
+  background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2005,7 +2005,7 @@ section {
   transition: all var(--transition-normal);
   position: relative;
   z-index: 1;
-  font-size: 2rem;
+  font-size: 1.25rem;
   font-weight: 300;
 }
 
@@ -4382,101 +4382,100 @@ section {
 
 /* ===== Theme Switch ===== */
 
-.theme-switch {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  width: 26px;
-  height: 26px;
-  cursor: pointer;
-  margin-left: 1rem;
-}
-
-.theme-switch input {
-  position: absolute;
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.theme-switch .slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: var(--basic-black);
-  border: 1px solid var(--primary-dark);
-  border-radius: 24px;
-  transition: all 0.4s ease;
+.theme-toggle-container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  margin-left: 15px;
 }
 
-/* Sun and Moon Icons */
-.theme-switch .slider::after {
-  content: "\f186";
-  font-family: var(--fontawesome);
-  font-weight: 900;
-  position: absolute;
-  right: 6px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 14px;
-  color: gold;
-  transition: all 0.4s ease;
-  line-height: normal;
-  left: 0;
-  right: 0;
-  margin: auto;
-  width: 0.75rem;
+.theme-toggle {
+  --size: 2rem;
+  --icon-fill: hsl(210, 20%, 25%);
+  --icon-fill-hover: hsl(210, 20%, 15%);
+
+  background: none;
+  border: none;
+  padding: 0;
+  inline-size: var(--size);
+  block-size: var(--size);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  outline-offset: 5px;
+  color: var(--text-primary);
+  transition: transform 0.3s ease;
 }
 
-/* Dark mode styles */
-.theme-switch input:checked+.slider {
-  background-color: var(--surface-2);
-  border-color: var(--primary-dark);
+.theme-toggle:hover {
+  transform: scale(1.1);
 }
 
-.theme-switch input:checked+.slider::before {
-  transform: translateX(26px);
-  background-color: var(--primary);
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
 }
 
-.theme-switch input:checked+.slider::after {
-  content: "\f186";
-  /* Moon icon */
-  left: 8px;
-  right: auto;
-  color: var(--primary);
+.sun-and-moon> :is(.moon, .sun, .sun-beams) {
+  transform-origin: center;
+  transition: all 0.3s ease;
 }
 
-/* Hover effects */
-
-.theme-switch:active .slider::before {
-  transform: translateX(0) scale(0.9);
+.sun-and-moon>.sun {
+  /* fill: var(--icon-fill);*/
+  transition: opacity 0.3s ease;
 }
 
-theme-switch input:checked:active+.slider::before {
-  transform: translateX(26px) scale(0.9);
+.sun-and-moon>.sun-beams {
+  stroke: var(--icon-fill);
+  stroke-width: 2px;
+  opacity: 1;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Focus styles */
-.theme-switch input:focus-visible+.slider {
-  box-shadow: 0 0 0 2px var(--primary-light);
-  outline: none;
+[data-theme='dark'] .sun {
+  transform: scale(1.75);
+  opacity: 1;
 }
 
-.newsletter-form .form-group .btn-white:hover {
-  transform: none;
+[data-theme='dark'] .sun-beams {
+  transform: rotateZ(-25deg);
+  opacity: 0;
 }
 
-/* Focus outline */
-/* .theme-switch input:focus + .slider {
-  box-shadow: 0 0 0 2px var(--primary-dark);
-} */
+[data-theme='dark'] .moon>circle {
+  transform: translateX(-7px);
+  fill: var(--basic-white);
+
+}
+
+@supports (cx: 1) {
+  [data-theme='dark'] .moon>circle {
+    cx: 17;
+    fill: var(--accent-color);
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .theme-toggle {
+    --size: 1.75rem;
+  }
+
+  .theme-toggle-container {
+    margin-left: 10px;
+    right: -325px;
+    position: absolute;
+    transition:0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+  }
+  
+  .menu-active .theme-toggle-container {
+    right:250px;
+    opacity: 1;
+  }
+}
 
 .testimonial-carousel .carousel-navigation {
   display: flex;
@@ -4698,6 +4697,15 @@ html[data-theme="light"] {
   .cta-card .btn-secondary:hover {
     border-color: var(--primary-dark);
   }
+
+  .mobile-menu .mobile-social .social-icon {
+    background: var(--primary-light);
+  }
+
+  .mobile-menu .mobile-social .social-icon:hover {
+    color: var(--basic-white);
+    background: var(--primary-dark);
+  }
 }
 
 /* Dark Theme Support */
@@ -4705,6 +4713,11 @@ html[data-theme="dark"] {
   .tab-content {
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: none;
+  }
+
+  .tab-btn .icon svg path,
+  .tab-btn .icon svg g rect {
+    fill: #00f7ff !important;
   }
 
   .select-box select {
@@ -4725,17 +4738,6 @@ html[data-theme="dark"] {
     transition: all var(--transition-normal);
   }
 
-  .theme-switch .slider::before {
-    background: var(--primary-dark);
-  }
-
-  .theme-switch input:checked+.slider {
-    background: var(--basic-white);
-  }
-
-  .theme-switch input:checked+.slider::after {
-    color: grey;
-  }
 
   .cta-card {
     background: var(--btn-bg1);
@@ -4940,14 +4942,6 @@ html[data-theme="dark"] {
     top: -25%;
   }
 
-  .theme-switch {
-    left: 100%;
-    transition: left var(--transition-normal);
-  }
-
-  .menu-active .theme-switch {
-    left: -22%;
-  }
 
   .contact-wrapper {
     grid-template-columns: repeat(1, 1fr);
@@ -5114,9 +5108,5 @@ html[data-theme="dark"] {
     gap: 0.5rem;
   }
 
-  html[data-theme="dark"] {
-    .tab-btn .icon svg path {
-      fill: #00f7ff !important;
-    }
-  }
+
 }
