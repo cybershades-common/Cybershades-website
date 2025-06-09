@@ -4375,8 +4375,7 @@ section {
   align-items: center;
   width: 26px;
   height: 26px;
-  cursor: pointer;
-  margin-left: 1rem;
+  cursor: pointer; 
 }
 
 .theme-switch input {
@@ -4930,7 +4929,7 @@ html[data-theme="dark"] {
   }
 
   .menu-active .theme-switch {
-    left: -16%;
+    left: -20%;
   }
 
   .contact-wrapper {
