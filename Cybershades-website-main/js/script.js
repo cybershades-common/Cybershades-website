@@ -73,6 +73,7 @@ function initNavigation() {
     const mobileMenu = document.querySelector('.mobile-menu');
     const navLinks = document.querySelectorAll('.nav-link');
     const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+    const Body = document.querySelector('body');
     
     // Initialize theme
     initTheme();
@@ -93,6 +94,8 @@ function initNavigation() {
     mobileToggle.addEventListener('click', () => {
         mobileToggle.classList.toggle('active');
         mobileMenu.classList.toggle('active');
+        Body.classList.toggle('menu-active');
+        
         
         // Prevent body scrolling when menu is open
         if (mobileMenu.classList.contains('active')) {

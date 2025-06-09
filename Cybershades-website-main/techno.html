@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CyberShades | Next-Gen IT Solutions | Jaipur</title>
+    <title>Technologies | CyberShades | Next-Gen IT Solutions</title>
     <meta
       name="description"
-      content="CyberShades - Leading IT service provider based in Jaipur offering innovative software development, cloud solutions, AI, and cybersecurity services."
+      content="Explore CyberShades' technology expertise - from modern frameworks to cloud platforms, AI/ML, and cutting-edge development tools."
     />
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,6 +15,11 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
@@ -23,7 +28,7 @@
 
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="css/styles.css" />
-
+    <link rel="stylesheet" href="css/techno.css" />
   </head>
   <body>
     <!-- Particles Background -->
@@ -36,36 +41,25 @@
       <div class="particle"></div>
     </div>
 
-    <!-- Preloader -->
-    <div class="preloader">
-      <div class="preloader-inner">
-        <div class="logo-container">
-          <span class="logo-text">Cyber<span>Shades</span></span>
-        </div>
-        <div class="loading-bar">
-          <div class="loading-progress"></div>
-        </div>
-      </div>
-    </div>
-
-   <!-- Navigation -->
+    <!-- Navigation -->
     <nav class="navbar">
       <div class="container">
         <div class="navbar-wrapper">
           <a href="/" class="logo">
-            <span class="logo-text"><img src="img/CS-logo.png" alt=""></span>
-        
+            <span class="logo-text"
+              ><img src="img/CS-logo.png" alt="CyberShades"
+            /></span>
           </a>
           <div class="navbar-links">
             <ul class="nav-menu">
               <li class="nav-item">
-                <a href="/" class="nav-link active">Home</a>
+                <a href="index.html" class="nav-link">Home</a>
               </li>
               <li class="nav-item">
                 <a href="services.html" class="nav-link">Services</a>
               </li>
               <li class="nav-item">
-                <a href="techno.html" class="nav-link">Technologies</a>
+                <a href="techno.html" class="nav-link active">Technologies</a>
               </li>
               <li class="nav-item">
                 <a href="portfolio.html" class="nav-link">Portfolio</a>
@@ -73,20 +67,25 @@
               <li class="nav-item">
                 <a href="team.html" class="nav-link">Team</a>
               </li>
-              
+              <li class="nav-item">
+                <a href="about.html" class="nav-link">About</a>
+              </li>
               <li class="nav-item">
                 <a href="testimonial.html" class="nav-link">Testimonials</a>
               </li>
-             
               <li class="nav-item">
                 <a href="contact.html" class="nav-link">Contact</a>
               </li>
             </ul>
           </div>
-    <label class="theme-switch" for="theme-toggle">
-    <input type="checkbox" id="theme-toggle" aria-label="Toggle theme">
-    <span class="slider"></span>
-  </label>
+          <label class="theme-switch" for="theme-toggle">
+            <input
+              type="checkbox"
+              id="theme-toggle"
+              aria-label="Toggle theme"
+            />
+            <span class="slider"></span>
+          </label>
           <div class="mobile-toggle">
             <span></span>
             <span></span>
@@ -115,11 +114,12 @@
           <li class="mobile-nav-item">
             <a href="team.html" class="mobile-nav-link">Team</a>
           </li>
-         
+          <li class="mobile-nav-item">
+            <a href="about.html" class="mobile-nav-link">About</a>
+          </li>
           <li class="mobile-nav-item">
             <a href="testimonials.html" class="mobile-nav-link">Testimonials</a>
           </li>
-         
           <li class="mobile-nav-item">
             <a href="contact.html" class="mobile-nav-link">Contact</a>
           </li>
@@ -151,47 +151,47 @@
       </div>
     </div>
 
-    <!-- Technologies Hero Section -->
-    <section class="tech-hero">
-      <div class="hero-particles">
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-      </div>
+    <!-- Technologies Hero Section - Redesigned -->
+    <section class="tech-hero hero">
+      <div class="hero-bg"></div>
       <div class="container">
-        <div class="tech-hero-content">
-       
-            <div class="hero-subtitle">Cutting-Edge Technologies</div>
-           
-
-          <h1 class="tech-hero-title" data-aos="fade-up" data-aos-delay="100">
-            Mastering the
-            <span class="gradient-text">Future of Technology</span>
-          </h1>
-          <p
-            class="tech-hero-description"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            We harness the power of cutting-edge technologies to build
-            innovative solutions that drive digital transformation. Our
-            expertise spans across modern frameworks, cloud platforms, and
-            emerging technologies.
-          </p>
-          <div class="hero-tech-stats" data-aos="fade-up" data-aos-delay="300">
-            <div class="tech-stat-item">
-              <div class="stat-number">50+</div>
-              <div class="stat-label">Technologies</div>
+        <div class="hero-wrapper">
+          <div class="hero-content" data-aos="fade-up">
+            <div class="hero-subtitle">Our Tech Stack</div>
+            <h1 class="hero-title">
+              Mastering the
+              <span class="text-gradient">Future of Technology</span>
+            </h1>
+            <p class="hero-description">
+              We harness the power of cutting-edge technologies to build
+              innovative solutions that drive digital transformation. Our
+              expertise spans across modern frameworks, cloud platforms, AI/ML,
+              and emerging technologies that shape tomorrow's digital landscape.
+            </p>
+            <div class="hero-cta">
+              <a href="#technologies-showcase" class="btn btn-primary">
+                <span>Explore Our Stack</span>
+                <i class="fas fa-arrow-down"></i>
+              </a>
+              <a href="#tech-consultation" class="btn btn-secondary">
+                <span>Get Tech Consultation</span>
+              </a>
             </div>
-            <div class="tech-stat-item">
-              <div class="stat-number">15+</div>
-              <div class="stat-label">Frameworks</div>
+          </div>
+          <div class="hero-visual" data-aos="zoom-in" data-aos-delay="300">
+            <img
+              src="img/tech company-amico.svg"
+              alt="CyberShades Technology Stack"
+              class="hero-img"
+            />
+            <div class="cube"></div>
+            <div class="floating-card card-1">
+              <div class="icon"><i class="fas fa-code"></i></div>
+              <div class="text">Modern Frameworks</div>
             </div>
-            <div class="tech-stat-item">
-              <div class="stat-number">8+</div>
-              <div class="stat-label">Categories</div>
+            <div class="floating-card card-2">
+              <div class="icon"><i class="fas fa-cloud"></i></div>
+              <div class="text">Cloud-Native Solutions</div>
             </div>
           </div>
         </div>
@@ -200,18 +200,15 @@
 
     <!-- Service Categories Navigation -->
     <section class="service-categories-nav">
-      
-
+      <div class="container">
         <div class="section-header" data-aos="fade-up">
-          <div class="section-badge">
-            <i class="fas fa-graduation-cap"></i>
-            <span>Premium Expertise</span>
-          </div>
+          <div class="section-subtitle">Technology Categories</div>
           <h2 class="section-title">
-           Explore Our <span class="gradient-text">Expertise</span>
+            Explore Our <span class="gradient-text">Expertise</span>
           </h2>
           <p class="section-description">
-           Choose from our comprehensive range of technology solutions
+            Choose from our comprehensive range of technology solutions and
+            development expertise
           </p>
         </div>
         <div class="categories-wrapper">
@@ -220,28 +217,58 @@
               <i class="fas fa-layer-group"></i>
             </div>
             <div class="category-info">
-              <h3>All Services</h3>
+              <h3>All Technologies</h3>
               <span>Complete Portfolio</span>
             </div>
             <div class="category-glow"></div>
           </div>
-          <div class="category-card" data-category="development">
+          <div class="category-card" data-category="frontend">
             <div class="category-icon">
-              <i class="fas fa-code"></i>
+              <i class="fas fa-palette"></i>
             </div>
             <div class="category-info">
-              <h3>Development</h3>
-              <span>Custom Solutions</span>
+              <h3>Frontend</h3>
+              <span>User Interfaces</span>
+            </div>
+            <div class="category-glow"></div>
+          </div>
+          <div class="category-card" data-category="backend">
+            <div class="category-icon">
+              <i class="fas fa-server"></i>
+            </div>
+            <div class="category-info">
+              <h3>Backend</h3>
+              <span>Server Solutions</span>
+            </div>
+            <div class="category-glow"></div>
+          </div>
+          <div class="category-card" data-category="mobile">
+            <div class="category-icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <div class="category-info">
+              <h3>Mobile</h3>
+              <span>App Development</span>
             </div>
             <div class="category-glow"></div>
           </div>
           <div class="category-card" data-category="cloud">
             <div class="category-icon">
-              <i class="fas fa-cloud-sun"></i>
+              <i class="fas fa-cloud"></i>
             </div>
             <div class="category-info">
               <h3>Cloud & DevOps</h3>
               <span>Infrastructure</span>
+            </div>
+            <div class="category-glow"></div>
+          </div>
+          <div class="category-card" data-category="database">
+            <div class="category-icon">
+              <i class="fas fa-database"></i>
+            </div>
+            <div class="category-info">
+              <h3>Database</h3>
+              <span>Data Management</span>
             </div>
             <div class="category-glow"></div>
           </div>
@@ -250,28 +277,18 @@
               <i class="fas fa-brain"></i>
             </div>
             <div class="category-info">
-              <h3>AI & Analytics</h3>
+              <h3>AI & ML</h3>
               <span>Intelligence</span>
             </div>
             <div class="category-glow"></div>
           </div>
-          <div class="category-card" data-category="security">
+          <div class="category-card" data-category="tools">
             <div class="category-icon">
-              <i class="fas fa-shield-halved"></i>
+              <i class="fas fa-tools"></i>
             </div>
             <div class="category-info">
-              <h3>Security</h3>
-              <span>Protection</span>
-            </div>
-            <div class="category-glow"></div>
-          </div>
-          <div class="category-card" data-category="consulting">
-            <div class="category-icon">
-              <i class="fas fa-lightbulb"></i>
-            </div>
-            <div class="category-info">
-              <h3>Consulting</h3>
-              <span>Strategy</span>
+              <h3>Tools</h3>
+              <span>Development</span>
             </div>
             <div class="category-glow"></div>
           </div>
@@ -280,13 +297,10 @@
     </section>
 
     <!-- Technologies Grid -->
-    <section class="technologies-showcase">
+    <section id="technologies-showcase" class="technologies-showcase">
       <div class="container">
         <div class="section-header" data-aos="fade-up">
-          <div class="section-badge">
-            <i class="fas fa-code"></i>
-            <span>Our Expertise</span>
-          </div>
+          <div class="section-subtitle">Our Expertise</div>
           <h2 class="section-title">
             Technology <span class="gradient-text">Mastery</span>
           </h2>
@@ -337,7 +351,6 @@
                 <span class="experience-years">5+ Years</span>
               </div>
             </div>
-          
           </div>
 
           <div
@@ -379,7 +392,6 @@
                 <span class="experience-years">4+ Years</span>
               </div>
             </div>
-          
           </div>
 
           <div
@@ -421,7 +433,6 @@
                 <span class="experience-years">4+ Years</span>
               </div>
             </div>
-          
           </div>
 
           <!-- Backend Technologies -->
@@ -464,7 +475,6 @@
                 <span class="experience-years">6+ Years</span>
               </div>
             </div>
-          
           </div>
 
           <div
@@ -506,7 +516,6 @@
                 <span class="experience-years">5+ Years</span>
               </div>
             </div>
-          
           </div>
 
           <div
@@ -548,7 +557,6 @@
                 <span class="experience-years">5+ Years</span>
               </div>
             </div>
-          
           </div>
 
           <!-- Mobile Technologies -->
@@ -591,7 +599,6 @@
                 <span class="experience-years">4+ Years</span>
               </div>
             </div>
-          
           </div>
 
           <div
@@ -633,7 +640,6 @@
                 <span class="experience-years">3+ Years</span>
               </div>
             </div>
-          
           </div>
 
           <!-- Database Technologies -->
@@ -676,7 +682,6 @@
                 <span class="experience-years">5+ Years</span>
               </div>
             </div>
-          
           </div>
 
           <div
@@ -718,7 +723,6 @@
                 <span class="experience-years">5+ Years</span>
               </div>
             </div>
-          
           </div>
 
           <!-- Cloud Technologies -->
@@ -761,7 +765,6 @@
                 <span class="experience-years">6+ Years</span>
               </div>
             </div>
-          
           </div>
 
           <div
@@ -803,7 +806,6 @@
                 <span class="experience-years">4+ Years</span>
               </div>
             </div>
-          
           </div>
 
           <!-- AI/ML Technologies -->
@@ -846,7 +848,6 @@
                 <span class="experience-years">3+ Years</span>
               </div>
             </div>
-          
           </div>
 
           <!-- Tools -->
@@ -889,7 +890,6 @@
                 <span class="experience-years">7+ Years</span>
               </div>
             </div>
-          
           </div>
         </div>
       </div>
@@ -899,10 +899,7 @@
     <section class="tech-methodology">
       <div class="container">
         <div class="section-header" data-aos="fade-up">
-          <div class="section-badge">
-            <i class="fas fa-rocket"></i>
-            <span>Our Approach</span>
-          </div>
+          <div class="section-subtitle">Our Approach</div>
           <h2 class="section-title">
             Technology <span class="gradient-text">Selection Process</span>
           </h2>
@@ -969,13 +966,12 @@
       </div>
     </section>
 
-   <!-- Premium Consultation Experience -->
-    <section class="premium-consultation">
+    <!-- Premium Consultation Experience -->
+    <section id="tech-consultation" class="premium-consultation">
       <div class="container">
         <div class="consultation-showcase" data-aos="fade-up">
           <div class="showcase-background">
             <div class="bg-pattern"></div>
-            <div class="bg-glow"></div>
             <div class="bg-glow"></div>
             <div class="bg-glow"></div>
             <div class="bg-glow"></div>
@@ -988,7 +984,7 @@
               </div>
               <h2 class="consultation-title">
                 Ready to Begin Your
-                <span class="gradient-text">Digital Journey?</span>
+                <span class="gradient-text">Tech Journey?</span>
               </h2>
               <p class="consultation-description">
                 Transform your vision into reality with our expert guidance.
@@ -1033,14 +1029,14 @@
             </div>
 
             <div class="consultation-actions">
-              <button class="btn btn-primary">
+              <a href="contact.html" class="btn btn-primary">
                 <span>Schedule Free Consultation</span>
                 <i class="fas fa-calendar-alt"></i>
-              </button>
-              <button class="btn btn-secondary">
+              </a>
+              <a href="contact.html" class="btn btn-secondary">
                 <span>Get Instant Quote</span>
                 <i class="fas fa-calculator"></i>
-              </button>
+              </a>
             </div>
 
             <div class="consultation-trust">
@@ -1072,6 +1068,7 @@
         </div>
       </div>
     </section>
+
     <!-- Footer -->
     <footer class="footer">
       <div class="footer-bg"></div>
@@ -1114,12 +1111,13 @@
           <div class="footer-links">
             <h3>Company</h3>
             <ul>
-              <li><a href="#about">About Us</a></li>
-              <li><a href="#team">Our Team</a></li>
-              <li><a href="#portfolio">Portfolio</a></li>
-              <li><a href="#testimonials">Testimonials</a></li>
-              <li><a href="#blog">Blog</a></li>
-              <li><a href="#contact">Contact Us</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="techno.html">Technologies</a></li>
+              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="team.html">Team</a></li>
+              <li><a href="testimonials.html">Testimonials</a></li>
+              <li><a href="contact.html">Contact</a></li>
             </ul>
           </div>
           <div class="footer-contact">
@@ -1162,7 +1160,5 @@
 
     <!-- Scripts -->
     <script src="js/script.js"></script>
-    <script src="js/techno.js"></script>
-
   </body>
 </html>
