@@ -404,6 +404,8 @@ h6 {
   margin-bottom: var(--space-4);
 }
 
+
+
 h1 {
   font-size: clamp(2.5rem, 5vw, 4rem);
 }
@@ -413,7 +415,7 @@ h2 {
 }
 
 h3 {
-  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-size: clamp(1.5rem, 3vw, 1rem);
 }
 
 h4 {
@@ -3024,7 +3026,7 @@ section {
 
 .marker-number {
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 800;
   color: var(--primary);
   text-shadow: 0 0 10px var(--primary-glow);
@@ -3241,7 +3243,7 @@ section {
   font-family: var(--font-display);
   font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 800;
-  margin-bottom: var(--space-6);
+  margin-bottom: 3rem;
   line-height: 1.2;
 }
 
