@@ -4323,6 +4323,7 @@ section {
 .footer-top{
   grid-template-columns: repeat(1 ,1fr);
 }
+
 }
 /* ===== BACK TO TOP BUTTON ===== */
 .back-to-top {
@@ -4561,6 +4562,7 @@ html[data-theme="light"] {
     border-color: var(--surface-0) var(--surface-0) var(--basic-white) var(--basic-white);
   }
 
+  
   .service-categories-nav::before {
     background: transparent;
   }
@@ -4714,6 +4716,9 @@ html[data-theme="light"] {
   .mobile-menu .mobile-social .social-icon:hover {
     color: var(--basic-white);
     background: var(--primary-dark);
+  }
+  .team-stats .stat-block{
+background: transparent;
   }
 }
 
