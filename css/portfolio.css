@@ -468,6 +468,7 @@
   box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
 }
 
+
 /* Hide desktop tabs on mobile */
 @media (max-width: 768px) {
   .desktop-tabs {
@@ -483,33 +484,8 @@
   position: relative;
 }
 
-.portfolio-filter hr{
-  left: 0 !important;
-}
 
-.portfolio-filter hr {
-  height: 3px;
-  width: 16.67%;
-  margin: 0;
-  background: var(--primary);
-  border: none;
-  transition: margin-left var(--transition-normal);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
 
-.filter-btn {
-  padding: var(--space-4) var(--space-6);
-  background: transparent;
-  border: none;
-  font-weight: 500;
-  color: var(--text-secondary);
-  cursor: pointer;
-  transition: all var(--transition-normal);
-  flex: 1;
-  min-width: 0;
-}
 
 .filter-btn:hover,
 .filter-btn.active {
@@ -577,6 +553,11 @@ padding-bottom: 0;
 .portfolio-page .cs-portfolio-grid{
     margin-top: 0;
 }
+
+.portfolio-filter hr{
+  margin-left: 0 !important;
+}
+
 /* Responsive Design */
 @media (max-width: 992px) {
   .portfolio-workspace {

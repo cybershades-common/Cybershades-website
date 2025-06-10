@@ -1890,7 +1890,8 @@ section {
 }
 
 .tab-buttons .border-bottom,
-.tab-buttons hr {
+.tab-buttons hr,
+.portfolio-filter .tab-buttons hr{
   height: 0.25rem;
   width: 16.67%;
   margin: 0;

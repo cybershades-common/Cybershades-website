@@ -585,13 +585,10 @@ window.addEventListener('scroll', function() {
 window.addEventListener('resize', function() {
     // Recalculate filter indicator position
     //const filterHr = document.querySelector('.portfolio-filter hr');
-    const activeBtn = document.querySelector('.filter-btn.active');
-    const filterButtons = document.querySelectorAll('.filter-btn');
+   // const activeBtn = document.querySelector('.filter-btn.active');
+   // const filterButtons = document.querySelectorAll('.filter-btn');
     
-    if (filterHr && activeBtn && filterButtons.length > 0) {
-        const index = Array.from(filterButtons).indexOf(activeBtn);
-        updateFilterIndicator(index, filterHr);
-    }
+  
 });
 
 // Export functions for global access
