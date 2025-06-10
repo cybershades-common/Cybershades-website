@@ -1074,3 +1074,7 @@ html[data-theme="light"] .bg-glow:nth-child(3) {
       rgba(244, 63, 94, 0.2) 0%,
       transparent 70%);
 }
+
+html[data-theme="light"] .mobile-tech-select select{
+  border: 1px solid #e1e1e1;
+}
