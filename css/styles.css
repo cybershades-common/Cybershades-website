@@ -1664,7 +1664,7 @@ section {
 
 /* Classic Service Card */
 .service-card {
-  background-color: var(--surface-1);
+  background-color: var(--surface-2);
   border-radius: var(--radius-lg);
   padding: var(--space-6);
   border: none;
@@ -1897,14 +1897,16 @@ section {
 
 .tab-btn .icon {
   width: 100%;
-  height: 100px;
+  height: 5.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
+.tab-btn .icon svg{
+  height: 6rem;
+}
 .tab-btn[data-tab="ai"] .icon svg {
-  max-width: 50%;
+height:3rem;
 }
 
 .tab-buttons hr {
@@ -1981,7 +1983,7 @@ section {
 
 .tech-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: var(--space-8) var(--space-6);
 }
 
@@ -2006,7 +2008,7 @@ section {
   transition: all var(--transition-normal);
   position: relative;
   z-index: 1;
-  font-size: 1.25rem;
+  font-size: 2.75rem;
   font-weight: 300;
 }
 
@@ -3948,10 +3950,11 @@ section {
 
 .map-container {
   width: 100%;
-  height: 400px;
+  height: 100%;
   border-radius: var(--radius-lg);
   overflow: hidden;
   position: relative;
+  display: flex;
 }
 
 .map-placeholder {
@@ -4159,20 +4162,21 @@ section {
   color: var(--basic-white);
 }
 
-.footer-links h3 {
+.footer-top h3 {
   font-size: 1.2rem;
   color: var(--text-primary);
   margin-bottom: var(--space-4);
   position: relative;
   padding-bottom: var(--space-2);
+  display: inline-flex;
 }
 
-.footer-links h3::after {
+.footer-top h3::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 40px;
+  width: 100%;
   height: 2px;
   background: var(--gradient-primary);
 }
@@ -4217,23 +4221,8 @@ section {
   opacity: 1;
 }
 
-.footer-contact h3 {
-  font-size: 1.2rem;
-  color: var(--text-primary);
-  margin-bottom: var(--space-4);
-  position: relative;
-  padding-bottom: var(--space-2);
-}
 
-.footer-contact h3::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 40px;
-  height: 2px;
-  background: var(--gradient-primary);
-}
+
 
 .footer-contact .contact-item {
   margin-bottom: var(--space-4);
@@ -4460,7 +4449,7 @@ section {
 @supports (cx: 1) {
   [data-theme='dark'] .moon>circle {
     cx: 17;
-    fill: var(--accent-color);
+    fill: var(--surface-0);
   }
 }
 
@@ -4547,7 +4536,7 @@ section {
   display: flex;
   gap: 1rem;
 }
-
+.tab-pane h4,
 .tab-content .mobile-header {
   display: none;
 }
@@ -4555,6 +4544,18 @@ section {
 .no-hero{
   padding-top: 120px;
 }
+.homepage .services .section-title:after,
+.homepage .technologies .section-title:after{
+  max-width: 25%;
+  right: 0;
+  margin: auto;
+}
+
+.homepage .services .section-title:after{
+  max-width: 40%;
+}
+
+
 /* Light Theme Support */
 html[data-theme="light"] {
   .service-card .fold-corner::after {
@@ -4598,7 +4599,7 @@ html[data-theme="light"] {
   .contact-card,
   .testimonial-card {
     background-color: var(--basic-white);
-    border: 1px solid #eee;
+    border: 1px solid #e1e1e1;
   }
 
   .testimonial-card {
@@ -4608,13 +4609,13 @@ html[data-theme="light"] {
 
   .testimonial-carousel .nav-button {
     box-shadow: none;
-    border: 1px solid #eee;
+    border: 1px solid #e1e1e1;
   }
 
   .form-group input,
   .form-group select,
   .form-group textarea {
-    border: 1px solid #eee;
+    border: 1px solid #e1e1e1;
   }
 
   .portfolio-cta .btn:hover {
@@ -4628,7 +4629,7 @@ html[data-theme="light"] {
 
   .testimonial-inner {
     background: var(--card-bg-light);
-    border-color: #eee;
+    border-color: #e1e1e1;
     box-shadow: var(--card-shadow-light);
   }
 
@@ -4719,10 +4720,14 @@ html[data-theme="light"] {
   .team-stats .stat-block{
 background: transparent;
   }
+ 
 }
 
 /* Dark Theme Support */
 html[data-theme="dark"] {
+  .tab-btn{
+    color: var(--basic-white);
+  }
   .tab-content {
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: none;
@@ -5054,7 +5059,7 @@ html[data-theme="dark"] {
   .tech-card {
     padding: 1.5rem;
   }
-
+  .tab-pane h4,
   .tab-content .mobile-header {
     display: block;
   }
