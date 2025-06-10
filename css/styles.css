@@ -1884,7 +1884,7 @@ section {
 .tab-btn[data-tab="ai"] .icon svg {
 height:3rem;
 }
-
+.tab-buttons .border-bottom,
 .tab-buttons hr {
   height: 0.25rem;
   width: 16.67%;
@@ -1911,32 +1911,32 @@ height:3rem;
   flex: 1;
 }
 
-.tab-btn:first-child.active ~ hr,
+.tab-btn:first-child.active ~ .border-bottom,
 .tab-btn:first-child:hover ~ hr {
   left: 0;
 }
 
-.tab-btn:nth-child(2).active ~ hr,
+.tab-btn:nth-child(2).active ~ .border-bottom,
 .tab-btn:nth-child(2):hover ~ hr {
   left: 16.67%;
 }
 
-.tab-btn:nth-child(3).active ~ hr,
+.tab-btn:nth-child(3).active ~ .border-bottom,
 .tab-btn:nth-child(3):hover ~ hr {
   left: 33.34%;
 }
 
-.tab-btn:nth-child(4).active ~ hr,
+.tab-btn:nth-child(4).active ~ .border-bottom,
 .tab-btn:nth-child(4):hover ~ hr {
   left: 50%;
 }
 
-.tab-btn:nth-child(5).active ~ hr,
+.tab-btn:nth-child(5).active ~ .border-bottom,
 .tab-btn:nth-child(5):hover ~ hr {
   left: 66.67%;
 }
 
-.tab-btn:nth-child(6).active ~ hr,
+.tab-btn:nth-child(6).active ~ .border-bottom,
 .tab-btn:nth-child(6):hover ~ hr {
   left: 83.34%;
 }
