@@ -411,97 +411,198 @@ function initFAQ() {
 function initBackToTop() {
     const backToTopBtn = document.querySelector('.back-to-top');
     
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-            backToTopBtn.classList.add('show');
-        } else {
-            backToTopBtn.classList.remove('show');
-        }
-    });
-    
-    backToTopBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-}
-
-// Initialize tech tabs
-function initTechTabs() {
-    const tabButtons = document.querySelectorAll('.tech-tabs .tab-btn');
-    const tabPanes = document.querySelectorAll('.tech-tabs .tab-pane');
-
-    if (tabButtons.length === 0 || tabPanes.length === 0) return;
-
-    tabButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            // Remove active class from all buttons and panes
-            tabButtons.forEach(btn => btn.classList.remove('active'));
-            tabPanes.forEach(pane => pane.classList.remove('active'));
-
-            // Add active class to clicked button
-            button.classList.add('active');
-
-            // Show the corresponding tab pane
-            const tabId = button.getAttribute('data-tab');
-            const tabPane = document.getElementById(tabId);
-            if (tabPane) {
-                tabPane.classList.add('active');
+    if (backToTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
             }
         });
-    });
-}
-
-// Contact form validation
-function initContactForm() {
-    const contactForm = document.getElementById('contactForm');
-    
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        
+        backToTopBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            
-            // Get form fields
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            
-            // Simple validation
-            if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
-                alert('Please fill in all required fields.');
-                return;
-            }
-            
-            // Email validation
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                alert('Please enter a valid email address.');
-                return;
-            }
-            
-            // Form would normally send data to server here
-            // For demo, show success message and reset form
-            alert('Thank you for your message! We will get back to you soon.');
-            contactForm.reset();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
     }
 }
 
+// Initialize contact form
+function initContactForm() {
+    const contactForm = document.getElementById('contact-form');
+    if (!contactForm) return;
 
-// Call this function after page loads
-document.addEventListener('DOMContentLoaded', function() {
-  // Initial delay to ensure elements are loaded
-  setTimeout(initServiceCardEffects, 500);
-});
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = new FormData(contactForm);
+        const formObject = {};
+        formData.forEach((value, key) => {
+            formObject[key] = value;
+        });
+
+        // Basic validation
+        if (!formObject.name || !formObject.email || !formObject.message) {
+            showFormMessage('Please fill in all required fields', 'error');
+            return;
+        }
+
+        // Email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(formObject.email)) {
+            showFormMessage('Please enter a valid email address', 'error');
+            return;
+        }
+
+        // Show loading state
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalBtnText = submitBtn.innerHTML;
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = 'Sending...';
+
+        // Here you would typically send the form data to a server
+        // For demonstration, we'll simulate a successful submission
+        setTimeout(() => {
+            // Reset form
+            contactForm.reset();
+            
+            // Show success message
+            showFormMessage('Your message has been sent successfully!', 'success');
+            
+            // Reset button state
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnText;
+        }, 1500);
+    });
+}
+
+// Helper function to show form messages
+function showFormMessage(message, type = 'success') {
+    // Remove any existing messages
+    const existingMessages = document.querySelectorAll('.form-message');
+    existingMessages.forEach(msg => msg.remove());
+    
+    // Create message element
+    const messageEl = document.createElement('div');
+    messageEl.className = `form-message ${type}`;
+    messageEl.textContent = message;
+    
+    // Add to form
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.prepend(messageEl);
+        
+        // Auto-hide after 5 seconds
+        setTimeout(() => {
+            messageEl.style.opacity = '0';
+            setTimeout(() => messageEl.remove(), 300);
+        }, 5000);
+    }
+}
+
+// Initialize tech tabs with synchronized desktop and mobile functionality
+function initTechTabs() {
+    const tabButtons = document.querySelectorAll('.tech-tabs .tab-btn');
+    const tabPanes = document.querySelectorAll('.tech-tabs .tab-pane');
+    const mobileSelect = document.querySelector('.mobile-tech-select select');
+
+    // Return early if no tab elements found
+    if (tabButtons.length === 0 || tabPanes.length === 0) return;
+
+    // Function to activate a tab by ID
+    function activateTab(tabId) {
+        // Update tab buttons
+        tabButtons.forEach(btn => {
+            const btnTabId = btn.getAttribute('data-tab');
+            if (btnTabId === tabId) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        });
+
+        // Update tab panes with smooth transition
+        tabPanes.forEach(pane => {
+            if (pane.id === tabId) {
+                pane.classList.add('active');
+                // Trigger reflow to enable transition
+                void pane.offsetWidth;
+                pane.style.opacity = '1';
+            } else {
+                pane.style.opacity = '0';
+                setTimeout(() => {
+                    pane.classList.remove('active');
+                }, 150); // Match this with CSS transition duration
+            }
+        });
+
+        // Update mobile select
+        if (mobileSelect) {
+            mobileSelect.value = tabId;
+        }
+    }
 
 
-//Partner section slider
+    // Desktop tab buttons - handle click events
+    tabButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            const tabId = button.getAttribute('data-tab');
+            activateTab(tabId);
+        });
 
-// Enhanced Partners Section JavaScript
-document.addEventListener('DOMContentLoaded', function() {
-  initPartnersSlider();
-});
+        // Add keyboard navigation support
+        button.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                const tabId = button.getAttribute('data-tab');
+                activateTab(tabId);
+            }
+        });
+    });
+
+    // Mobile select dropdown - handle change events
+    if (mobileSelect) {
+        mobileSelect.addEventListener('change', (e) => {
+            const tabId = e.target.value;
+            activateTab(tabId);
+        });
+    }
+    
+    // Activate the first tab by default if none is active
+    const activeTabs = document.querySelectorAll('.tech-tabs .tab-pane.active');
+    if (activeTabs.length === 0 && tabPanes.length > 0) {
+        const firstTabId = tabPanes[0].id;
+        activateTab(firstTabId);
+    }
+
+    // Handle window resize to ensure proper tab visibility
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            const activeTab = document.querySelector('.tech-tabs .tab-pane.active');
+            if (activeTab) {
+                // Force reflow to ensure smooth transition after resize
+                void activeTab.offsetWidth;
+            }
+        }, 100);
+    });
+}
+
+// Service card effects
+function initServiceCardEffects() {
+    // Add any service card effects here
+}
+
+// Partner section slider
+function initPartnersSlider() {
+    // Partners slider initialization code here
+}
 
 function initPartnersSlider() {
   const partnersTrack = document.querySelector('.partners-track');
@@ -703,7 +804,7 @@ document.head.appendChild(styleSheet);
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  const toggleInput = document.querySelector('.switch__input');
+  const toggleInput = document.getElementById('theme-toggle');
   const htmlEl      = document.documentElement;
   const KEY         = 'theme';
 

@@ -1368,13 +1368,15 @@ a.social-icon:hover {
   z-index: 1;
 }
 
-.mb-0{
+.mb-0 {
   margin-bottom: 0;
 }
-.pb-0{
+
+.pb-0 {
   padding-bottom: 0;
 }
-.pt-0{
+
+.pt-0 {
   padding-top: 0;
 }
 
@@ -1878,12 +1880,15 @@ section {
   align-items: center;
   justify-content: center;
 }
-.tab-btn .icon svg{
+
+.tab-btn .icon svg {
   height: 6rem;
 }
+
 .tab-btn[data-tab="ai"] .icon svg {
-height:3rem;
+  height: 3rem;
 }
+
 .tab-buttons .border-bottom,
 .tab-buttons hr {
   height: 0.25rem;
@@ -1907,45 +1912,45 @@ height:3rem;
   transition: var(--transition-normal);
   position: relative;
   letter-spacing: 0.02em;
-
   flex: 1;
 }
 
-.tab-btn:first-child.active ~ .border-bottom,
-.tab-btn:first-child:hover ~ hr {
+
+.tab-btn:first-child:hover~hr {
   left: 0;
 }
 
-.tab-btn:nth-child(2).active ~ .border-bottom,
-.tab-btn:nth-child(2):hover ~ hr {
+.tab-btn:nth-child(2).active~.border-bottom,
+.tab-btn:nth-child(2):hover~hr {
   left: 16.67%;
 }
 
-.tab-btn:nth-child(3).active ~ .border-bottom,
-.tab-btn:nth-child(3):hover ~ hr {
+.tab-btn:nth-child(3).active~.border-bottom,
+.tab-btn:nth-child(3):hover~hr {
   left: 33.34%;
 }
 
-.tab-btn:nth-child(4).active ~ .border-bottom,
-.tab-btn:nth-child(4):hover ~ hr {
+.tab-btn:nth-child(4).active~.border-bottom,
+.tab-btn:nth-child(4):hover~hr {
   left: 50%;
 }
 
-.tab-btn:nth-child(5).active ~ .border-bottom,
-.tab-btn:nth-child(5):hover ~ hr {
+.tab-btn:nth-child(5).active~.border-bottom,
+.tab-btn:nth-child(5):hover~hr {
   left: 66.67%;
 }
 
-.tab-btn:nth-child(6).active ~ .border-bottom,
-.tab-btn:nth-child(6):hover ~ hr {
+.tab-btn:nth-child(6).active~.border-bottom,
+.tab-btn:nth-child(6):hover~hr {
   left: 83.34%;
 }
+
 .tab-btn:hover {
   color: var(--primary);
 }
 
 .tab-content {
-  background-color: var(--surface-1); 
+  background-color: var(--surface-1);
   padding: var(--space-8);
   box-shadow: var(--shadow-lg), 0 -5px 15px rgba(99, 102, 241, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -4238,7 +4243,7 @@ height:3rem;
 
 @media (max-width: 992px) {
   .footer-top {
-    grid-template-columns: repeat(3 , 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--space-6);
   }
 
@@ -4287,12 +4292,13 @@ height:3rem;
   }
 }
 
-@media(max-width:767px){
-.footer-top{
-  grid-template-columns: repeat(1 ,1fr);
-}
+@media(max-width:767px) {
+  .footer-top {
+    grid-template-columns: repeat(1, 1fr);
+  }
 
 }
+
 /* ===== BACK TO TOP BUTTON ===== */
 .back-to-top {
   position: fixed;
@@ -4443,12 +4449,12 @@ height:3rem;
     margin-left: 10px;
     right: -325px;
     position: absolute;
-    transition:0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     opacity: 0;
   }
-  
+
   .menu-active .theme-toggle-container {
-    right:250px;
+    right: 250px;
     opacity: 1;
   }
 }
@@ -4516,22 +4522,24 @@ height:3rem;
   display: flex;
   gap: 1rem;
 }
+
 .tab-pane h4,
 .tab-content .mobile-header {
   display: none;
 }
 
-.no-hero{
+.no-hero {
   padding-top: 120px;
 }
+
 .homepage .services .section-title:after,
-.homepage .technologies .section-title:after{
+.homepage .technologies .section-title:after {
   max-width: 25%;
   right: 0;
   margin: auto;
 }
 
-.homepage .services .section-title:after{
+.homepage .services .section-title:after {
   max-width: 40%;
 }
 
@@ -4542,7 +4550,7 @@ html[data-theme="light"] {
     border-color: var(--surface-0) var(--surface-0) var(--basic-white) var(--basic-white);
   }
 
-  
+
   .service-categories-nav::before {
     background: transparent;
   }
@@ -4697,17 +4705,19 @@ html[data-theme="light"] {
     color: var(--basic-white);
     background: var(--primary-dark);
   }
-  .team-stats .stat-block{
-background: transparent;
+
+  .team-stats .stat-block {
+    background: transparent;
   }
- 
+
 }
 
 /* Dark Theme Support */
 html[data-theme="dark"] {
-  .tab-btn{
+  .tab-btn {
     color: var(--basic-white);
   }
+
   .tab-content {
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: none;
@@ -5039,6 +5049,7 @@ html[data-theme="dark"] {
   .tech-card {
     padding: 1.5rem;
   }
+
   .tab-pane h4,
   .tab-content .mobile-header {
     display: block;
@@ -5050,6 +5061,11 @@ html[data-theme="dark"] {
     border-bottom: 1px solid var(--primary-dark);
   }
 
+  .tab-buttons .border-bottom,
+  .tab-buttons hr {
+    display: none ;
+    opacity: 0;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -5085,9 +5101,11 @@ html[data-theme="dark"] {
   .step-description {
     font-size: 1rem;
   }
-  .tab-buttons{
+
+  .tab-buttons {
     margin-bottom: 0;
   }
+
   .tab-btn {
     font-size: 0;
     padding: 0;
