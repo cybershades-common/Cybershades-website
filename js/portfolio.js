@@ -233,8 +233,9 @@ function initPortfolioFilter() {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const portfolioItems = document.querySelectorAll('.portfolio-item');
     const filterHr = document.querySelector('.portfolio-filter hr');
+    const mobileFilter = document.querySelector('.mobile-filter-select');
     
-    if (filterButtons.length === 0 || portfolioItems.length === 0) return;
+    if ((filterButtons.length === 0 || portfolioItems.length === 0) && !mobileFilter) return;
     
     // Set initial hr position
     const activeBtn = document.querySelector('.filter-btn.active');
@@ -243,23 +244,50 @@ function initPortfolioFilter() {
         updateFilterIndicator(index, filterHr);
     }
     
+    // Handle desktop filter buttons
     filterButtons.forEach((button, index) => {
         button.addEventListener('click', function() {
             const filterValue = this.getAttribute('data-filter');
-            
-            // Update active button
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            this.classList.add('active');
-            
-            // Update hr position
-            if (filterHr) {
-                updateFilterIndicator(index, filterHr);
-            }
-            
-            // Filter portfolio items with staggered animation
+            updateActiveFilter(filterValue, index);
             filterPortfolioItems(filterValue, portfolioItems);
         });
     });
+    
+    // Handle mobile filter select
+    if (mobileFilter) {
+        // Set initial value
+        const activeFilter = document.querySelector('.filter-btn.active');
+        if (activeFilter) {
+            mobileFilter.value = activeFilter.getAttribute('data-filter');
+        }
+        
+        mobileFilter.addEventListener('change', function() {
+            const filterValue = this.value;
+            updateActiveFilter(filterValue);
+            filterPortfolioItems(filterValue, portfolioItems);
+        });
+    }
+    
+    function updateActiveFilter(filterValue, index = 0) {
+        // Update desktop buttons
+        filterButtons.forEach(btn => {
+            if (btn.getAttribute('data-filter') === filterValue) {
+                btn.classList.add('active');
+                // Update hr position if filterHr exists
+                if (filterHr) {
+                    const btnIndex = Array.from(filterButtons).indexOf(btn);
+                    updateFilterIndicator(btnIndex, filterHr);
+                }
+            } else {
+                btn.classList.remove('active');
+            }
+        });
+        
+        // Update mobile select
+        if (mobileFilter) {
+            mobileFilter.value = filterValue;
+        }
+    }
 }
 
 // Update filter indicator position
