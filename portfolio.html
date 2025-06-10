@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/portfolio.css" />
   </head>
-  <body>
+  <body class="portfolio-page">
     <!-- Particles Background -->
     <div class="particles-wrapper">
       <div class="particle"></div>
@@ -72,7 +72,7 @@
               </li>
               
               <li class="nav-item">
-                <a href="testimonials.html" class="nav-link">Testimonials</a>
+                <a href="testimonial.html" class="nav-link">Testimonials</a>
               </li>
              
               <li class="nav-item">
@@ -80,27 +80,27 @@
               </li>
             </ul>
           </div>
-        <div class="theme-toggle-container">
-          <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
-            <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
-              <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor" />
-              <g class="sun-beams" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                <line x1="12" y1="1" x2="12" y2="3" />
-                <line x1="12" y1="21" x2="12" y2="23" />
-                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
-                <line x1="1" y1="12" x2="3" y2="12" />
-                <line x1="21" y1="12" x2="23" y2="12" />
-                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
-                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
-              </g>
-              <mask class="moon" id="moon-mask">
-                <rect x="0" y="0" width="100%" height="100%" fill="white" />
-                <circle cx="24" cy="10" r="6" fill="black" />
-              </mask>
-            </svg>
-          </button>
-        </div>
+          <div class="theme-toggle-container">
+            <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+              <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+                <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor" />
+                <g class="sun-beams" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                  <line x1="12" y1="1" x2="12" y2="3" />
+                  <line x1="12" y1="21" x2="12" y2="23" />
+                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                  <line x1="1" y1="12" x2="3" y2="12" />
+                  <line x1="21" y1="12" x2="23" y2="12" />
+                  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                </g>
+                <mask class="moon" id="moon-mask">
+                  <rect x="0" y="0" width="100%" height="100%" fill="white" />
+                  <circle cx="24" cy="10" r="6" fill="black" />
+                </mask>
+              </svg>
+            </button>
+          </div>
           <div class="mobile-toggle">
             <span></span>
             <span></span>
@@ -274,7 +274,7 @@
     </section>
 
     <!-- Portfolio Filter Section -->
-    <div class="portfolio-filter" data-aos="fade-up">
+    <section class="technologies">
       <div class="container">
         <div class="section-header" data-aos="fade-up">
           <div class="section-subtitle">Browse Projects</div>
@@ -286,8 +286,8 @@
             and technologies
           </p>
         </div>
-     
-          <div class="tab-buttons">
+        <div class="portfolio-filter" data-aos="fade-up">
+          <div class="tab-buttons mb-0">
             <button class="tab-btn filter-btn active" data-filter="all">
               All Projects
             </button>
@@ -306,8 +306,14 @@
             </button>
             <hr />
           </div>
-      
-       <div class="cs-portfolio-grid" data-aos="fade-up">
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section id="portfolio" class="cs-portfolio pt-0">
+      <div class="container">
+        <div class="cs-portfolio-grid" data-aos="fade-up">
           <!-- Project Cards -->
           <div
             class="cs-portfolio-card portfolio-item"
@@ -574,10 +580,10 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- Call to Action -->
-    <section class="services">
+    <section class="services pt-0">
       <div class="container">
         <div class="cta-card" data-aos="fade-up">
           <div class="cta-content">

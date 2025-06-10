@@ -228,6 +228,46 @@ rippleStyle.textContent = `
 `;
 document.head.appendChild(rippleStyle);
 
+// Portfolio Filter Functionality
+function initPortfolioFilter() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    const filterHr = document.querySelector('.portfolio-filter hr');
+    
+    if (filterButtons.length === 0 || portfolioItems.length === 0) return;
+    
+    // Set initial hr position
+    const activeBtn = document.querySelector('.filter-btn.active');
+    if (activeBtn && filterHr) {
+        const index = Array.from(filterButtons).indexOf(activeBtn);
+        updateFilterIndicator(index, filterHr);
+    }
+    
+    filterButtons.forEach((button, index) => {
+        button.addEventListener('click', function() {
+            const filterValue = this.getAttribute('data-filter');
+            
+            // Update active button
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Update hr position
+            if (filterHr) {
+                updateFilterIndicator(index, filterHr);
+            }
+            
+            // Filter portfolio items with staggered animation
+            filterPortfolioItems(filterValue, portfolioItems);
+        });
+    });
+}
+
+// Update filter indicator position
+function updateFilterIndicator(index, hrElement) {
+    const percentage = (100 / 6) * index; // 6 filter buttons
+    hrElement.style.marginLeft = `${percentage}%`;
+}
+
 // Filter portfolio items with animation
 function filterPortfolioItems(filterValue, portfolioItems) {
     let visibleIndex = 0;
@@ -516,14 +556,14 @@ window.addEventListener('scroll', function() {
 // Resize handler for responsive behavior
 window.addEventListener('resize', function() {
     // Recalculate filter indicator position
-    const filterHr = document.querySelector('.portfolio-filter hr');
+    //const filterHr = document.querySelector('.portfolio-filter hr');
     const activeBtn = document.querySelector('.filter-btn.active');
     const filterButtons = document.querySelectorAll('.filter-btn');
     
-  //  if (filterHr && activeBtn && filterButtons.length > 0) {
-  //      const index = Array.from(filterButtons).indexOf(activeBtn);
-       // updateFilterIndicator(index, filterHr);
-  //  }
+    if (filterHr && activeBtn && filterButtons.length > 0) {
+        const index = Array.from(filterButtons).indexOf(activeBtn);
+        updateFilterIndicator(index, filterHr);
+    }
 });
 
 // Export functions for global access

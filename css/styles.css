@@ -1368,38 +1368,14 @@ a.social-icon:hover {
   z-index: 1;
 }
 
-/* Add a glow behind the logo */
-.partner-logo::after {
-  /*content: "";
-  position: absolute;
-  inset: 0;
-  background: var(--gradient-primary);
-  opacity: 0;
-  filter: blur(20px);
-  transition: opacity 0.5s ease;
-  z-index: -1;*/
+.mb-0{
+  margin-bottom: 0;
 }
-
-/* Impressive hover effects */
-.partner-logo:hover {
-  /*transform: translateY(-10px) rotateX(10deg) rotateY(-10deg) scale(1.05);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2), 0 0 20px rgba(99, 102, 241, 0.3);
-  border-color: rgba(99, 102, 241, 0.3);
-  background-color: rgba(30, 41, 59, 0.7);*/
+.pb-0{
+  padding-bottom: 0;
 }
-
-.partner-logo:hover::before {
-  /*animation: shine 1.5s infinite;
-  opacity: 1;*/
-}
-
-.partner-logo:hover::after {
-  /*opacity: 0.15;*/
-}
-
-.partner-logo:hover img {
-  /*filter: grayscale(0%) brightness(1.2);
-  transform: translateZ(20px) scale(1.1);*/
+.pt-0{
+  padding-top: 0;
 }
 
 @keyframes shine {
@@ -1935,31 +1911,35 @@ height:3rem;
   flex: 1;
 }
 
-
-.tab-btn:first-child.active~hr {
+.tab-btn:first-child.active ~ hr,
+.tab-btn:first-child:hover ~ hr {
   left: 0;
 }
 
-.tab-btn:nth-child(2).active~hr {
+.tab-btn:nth-child(2).active ~ hr,
+.tab-btn:nth-child(2):hover ~ hr {
   left: 16.67%;
 }
 
-.tab-btn:nth-child(3).active~hr {
+.tab-btn:nth-child(3).active ~ hr,
+.tab-btn:nth-child(3):hover ~ hr {
   left: 33.34%;
 }
 
-.tab-btn:nth-child(4).active~hr {
+.tab-btn:nth-child(4).active ~ hr,
+.tab-btn:nth-child(4):hover ~ hr {
   left: 50%;
 }
 
-.tab-btn:nth-child(5).active~hr {
+.tab-btn:nth-child(5).active ~ hr,
+.tab-btn:nth-child(5):hover ~ hr {
   left: 66.67%;
 }
 
-.tab-btn:nth-child(6).active~hr {
+.tab-btn:nth-child(6).active ~ hr,
+.tab-btn:nth-child(6):hover ~ hr {
   left: 83.34%;
 }
-
 .tab-btn:hover {
   color: var(--primary);
 }
@@ -2054,8 +2034,8 @@ height:3rem;
 
 .cs-portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-  gap: 40px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
   margin-top: 60px;
 }
 
