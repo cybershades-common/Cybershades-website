@@ -4429,7 +4429,7 @@ section {
 
 [data-theme='dark'] .moon>circle {
   transform: translateX(-7px);
-  fill: var(--basic-white);
+
 
 }
 
