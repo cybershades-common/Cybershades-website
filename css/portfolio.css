@@ -500,6 +500,9 @@
 .portfolio-item.hidden {
   display: none;
 }
+.portfolio-page .portfolio-item{
+  height: auto;
+}
 
 /* Enhanced floating cards for portfolio */
 .portfolio-hero .floating-card {
