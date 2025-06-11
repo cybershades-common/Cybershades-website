@@ -5135,4 +5135,7 @@ html[data-theme="dark"] {
   .about-page .why-choose-us .section-title:after{
     max-width: 70%;
   }
+  .testimonial-carousel {
+    margin-bottom: 2rem;
+  }
 }
