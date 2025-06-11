@@ -5067,6 +5067,10 @@ html[data-theme="dark"] {
     display: none ;
     opacity: 0;
   }
+  .map-placeholder{
+    min-height: 300px;
+  }
+  
 }
 
 @media screen and (max-width: 576px) {
@@ -5126,16 +5130,23 @@ html[data-theme="dark"] {
     grid-template-columns: repeat(3, 1fr);
     gap: 0.5rem;
   }
+  .contact-page .no-hero .section-title:after,
+  .technology-page .tech-methodology .section-title:after,
   .about-page .why-choose-us .section-title:after,
   .about-page .company-culture .section-title:after{
     max-width:30%;
     right:0;
     margin: auto;
   }
+  .technology-page .tech-methodology .section-title:after,
   .about-page .why-choose-us .section-title:after{
     max-width: 70%;
+  }
+  .contact-page .no-hero .section-title:after{
+    max-width: 80%;
   }
   .testimonial-carousel {
     margin-bottom: 2rem;
   }
+
 }
