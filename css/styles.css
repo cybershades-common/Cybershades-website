@@ -5126,10 +5126,13 @@ html[data-theme="dark"] {
     grid-template-columns: repeat(3, 1fr);
     gap: 0.5rem;
   }
-
+  .about-page .why-choose-us .section-title:after,
   .about-page .company-culture .section-title:after{
     max-width:30%;
     right:0;
     margin: auto;
+  }
+  .about-page .why-choose-us .section-title:after{
+    max-width: 70%;
   }
 }
