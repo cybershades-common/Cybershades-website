@@ -5127,5 +5127,9 @@ html[data-theme="dark"] {
     gap: 0.5rem;
   }
 
-
+  .about-page .company-culture .section-title:after{
+    max-width:30%;
+    right:0;
+    margin: auto;
+  }
 }
