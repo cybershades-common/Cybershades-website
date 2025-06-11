@@ -4535,13 +4535,13 @@ section {
 
 .homepage .services .section-title:after,
 .homepage .technologies .section-title:after {
-  max-width: 25%;
+  max-width: 40%;
   right: 0;
   margin: auto;
 }
 
 .homepage .services .section-title:after {
-  max-width: 40%;
+  max-width: 65%;
 }
 
 
