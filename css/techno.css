@@ -993,6 +993,7 @@
   .consultation-actions {
     flex-direction: column;
     align-items: center;
+    margin-bottom: 2rem;
   }
 
   .trust-stats {
